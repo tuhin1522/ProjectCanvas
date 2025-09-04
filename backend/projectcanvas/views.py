@@ -242,3 +242,74 @@ The ProjectCanvas Team
             return JsonResponse({'error': str(e)}, status=400)
     
     return JsonResponse({'error': 'Invalid request'}, status=400)
+
+@csrf_exempt
+def forgot_password(request):
+    """Handle forgot password request and send reset email"""
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            email = data.get('email')
+            user = User.objects.filter(email=email).first()
+            if not user:
+                # Don't reveal if user exists
+                return JsonResponse({'message': 'If your email is registered, a reset link has been sent.'})
+            # Generate token and expiration
+            reset_token = str(uuid.uuid4())
+            user.reset_token = reset_token
+            user.reset_token_created = timezone.now()
+            user.save()
+            # Send email
+            frontend_url = getattr(settings, 'FRONTEND_URL', 'http://localhost:5173')
+            reset_url = f"{frontend_url}/reset-password/{reset_token}"
+            email_subject = "Reset Your ProjectCanvas Password"
+            email_body = f"""
+Hello {user.name},
+
+You requested a password reset. Click the link below to set a new password:
+
+{reset_url}
+
+This link will expire in 10 minutes.
+
+If you did not request this, please ignore this email.
+
+Best regards,
+ProjectCanvas Team
+"""
+            send_mail(
+                email_subject,
+                email_body,
+                settings.DEFAULT_FROM_EMAIL,
+                [user.email],
+                fail_silently=False,
+            )
+            return JsonResponse({'message': 'If your email is registered, a reset link has been sent.'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    return JsonResponse({'error': 'Invalid request'}, status=400)
+
+@csrf_exempt
+def reset_password(request, token):
+    """Handle password reset via token"""
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            password = data.get('password')
+            user = User.objects.filter(reset_token=token).first()
+            if not user:
+                return JsonResponse({'error': 'Invalid or expired token.'}, status=400)
+            # Check expiration (10 minutes)
+            expiration_time = user.reset_token_created + timezone.timedelta(minutes=10)
+            if timezone.now() > expiration_time:
+                user.reset_token = None
+                user.save()
+                return JsonResponse({'error': 'Token expired.'}, status=400)
+            # Set new password
+            user.set_password(password)
+            user.reset_token = None
+            user.save()
+            return JsonResponse({'message': 'Password reset successful.'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    return JsonResponse({'error': 'Invalid request'}, status=400)

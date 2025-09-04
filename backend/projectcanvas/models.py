@@ -52,6 +52,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     email_verified = models.BooleanField(default=False)
     email_verification_token = models.CharField(max_length=100, null=True, blank=True)
     verification_token_created = models.DateTimeField(null=True, blank=True)
+
+    # Add to User model
+    reset_token = models.CharField(max_length=100, null=True, blank=True)
+    reset_token_created = models.DateTimeField(null=True, blank=True)
     
     objects = UserManager()
     

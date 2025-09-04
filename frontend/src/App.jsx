@@ -9,6 +9,8 @@ import Upload from './components/Upload'
 import VerifyEmail from './components/VerifyEmail'
 import VerificationPending from './components/VerificationPending'
 import ResendVerification from './components/ResendVerification'
+import ForgotPassword from './components/ForgotPassword'
+import ResetPassword from './components/ResetPassword'
 // import Logout from './components/Logout'
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <Route path="/verify-email/:token" element={<VerifyEmail />} />
             <Route path="/verification-pending" element={<VerificationPending />} />
             <Route path="/resend-verification" element={<ResendVerification />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
             {/* <Route path="/logout" element={<Logout />} /> */}
           </Routes>
         </div>

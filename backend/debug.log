@@ -361,3 +361,25 @@ INFO 2025-09-04 22:20:20,689 basehttp "GET /api/verify-email/5a6c416f-2297-42ae-
 INFO 2025-09-04 22:20:35,122 basehttp "POST /api/login/ HTTP/1.1" 200 147
 WARNING 2025-09-04 22:21:13,244 log Unauthorized: /api/login/
 WARNING 2025-09-04 22:21:13,245 basehttp "POST /api/login/ HTTP/1.1" 401 38
+INFO 2025-09-04 22:31:04,761 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-04 22:31:05,143 autoreload Watching for file changes with StatReloader
+INFO 2025-09-04 22:35:39,497 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-04 22:37:54,792 log Unauthorized: /api/login/
+WARNING 2025-09-04 22:37:54,793 basehttp "POST /api/login/ HTTP/1.1" 401 38
+INFO 2025-09-04 22:38:13,679 basehttp "OPTIONS /api/forgot-password/ HTTP/1.1" 200 0
+INFO 2025-09-04 22:38:18,708 basehttp "POST /api/forgot-password/ HTTP/1.1" 200 71
+INFO 2025-09-04 22:39:30,458 basehttp "OPTIONS /api/reset-password/8210af3a-a7e6-49a2-b5e6-d88731b9c1ed/ HTTP/1.1" 200 0
+INFO 2025-09-04 22:39:30,888 basehttp "POST /api/reset-password/8210af3a-a7e6-49a2-b5e6-d88731b9c1ed/ HTTP/1.1" 200 41
+WARNING 2025-09-04 22:39:48,904 log Unauthorized: /api/login/
+WARNING 2025-09-04 22:39:48,904 basehttp "POST /api/login/ HTTP/1.1" 401 38
+INFO 2025-09-04 22:40:01,056 basehttp "POST /api/login/ HTTP/1.1" 200 147
+WARNING 2025-09-04 22:42:07,858 log Unauthorized: /api/login/
+WARNING 2025-09-04 22:42:07,858 basehttp "POST /api/login/ HTTP/1.1" 401 38
+WARNING 2025-09-04 22:42:11,703 log Unauthorized: /api/login/
+WARNING 2025-09-04 22:42:11,703 basehttp "POST /api/login/ HTTP/1.1" 401 38
+INFO 2025-09-04 22:42:32,662 basehttp "POST /api/forgot-password/ HTTP/1.1" 200 71
+INFO 2025-09-04 22:43:15,283 basehttp "OPTIONS /api/reset-password/4c2fa21a-3bc1-413a-8035-5b14fca5c8dc/ HTTP/1.1" 200 0
+INFO 2025-09-04 22:43:15,645 basehttp "POST /api/reset-password/4c2fa21a-3bc1-413a-8035-5b14fca5c8dc/ HTTP/1.1" 200 41
+WARNING 2025-09-04 22:43:30,657 log Unauthorized: /api/login/
+WARNING 2025-09-04 22:43:30,657 basehttp "POST /api/login/ HTTP/1.1" 401 38
+INFO 2025-09-04 22:43:36,741 basehttp "POST /api/login/ HTTP/1.1" 200 147
