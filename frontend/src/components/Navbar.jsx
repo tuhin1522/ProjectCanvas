@@ -19,7 +19,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-50 via-blue-50 to-indigo-100 shadow-md fixed w-full z-50">
+    // Use a solid background color instead of gradient/opacity
+    <nav
+      className="shadow-md fixed w-full z-50"
+      style={{ backgroundColor: '#eef2ff' }} // Tailwind indigo-50
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -72,7 +76,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-1">
             {navItems.map((item) => {
-              // Special styles for Login and Signup
               if (item.name === 'Signup') {
                 return (
                   <Link
@@ -137,7 +140,6 @@ const Navbar = () => {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              {/* Icon when menu is closed */}
               {!isMobileMenuOpen ? (
                 <svg 
                   className="block h-6 w-6" 
@@ -177,7 +179,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg rounded-b-lg`}>
+      <div 
+        className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden shadow-lg rounded-b-lg`}
+        style={{ backgroundColor: '#eef2ff' }}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => {
             if (item.name === 'Signup') {
