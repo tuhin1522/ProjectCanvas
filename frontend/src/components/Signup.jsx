@@ -150,10 +150,13 @@ const Signup = () => {
       const data = await response.json();
       
       if (response.ok) {
-        toast.success('Account created successfully!');
+        // Store email for verification pending page
+        localStorage.setItem('pendingVerification', formData.email);
+        
+        toast.success('Please check your email to verify your account!');
         setTimeout(() => {
-          navigate('/login');
-        }, 2000);
+          navigate('/verification-pending');
+        }, 1500);
       } else {
         toast.error(data.error || 'Failed to create account');
       }
