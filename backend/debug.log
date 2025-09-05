@@ -383,3 +383,61 @@ INFO 2025-09-04 22:43:15,645 basehttp "POST /api/reset-password/4c2fa21a-3bc1-41
 WARNING 2025-09-04 22:43:30,657 log Unauthorized: /api/login/
 WARNING 2025-09-04 22:43:30,657 basehttp "POST /api/login/ HTTP/1.1" 401 38
 INFO 2025-09-04 22:43:36,741 basehttp "POST /api/login/ HTTP/1.1" 200 147
+INFO 2025-09-04 22:49:35,592 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9540
+INFO 2025-09-04 22:49:35,632 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,634 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,636 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,637 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,638 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,640 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,641 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,642 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,646 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-09-04 22:49:35,648 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-04 22:49:35,648 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,674 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,678 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-09-04 22:49:35,682 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,683 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,688 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,690 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-04 22:49:35,759 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-04 22:49:35,805 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+WARNING 2025-09-04 22:49:35,855 log Not Found: /favicon.ico
+INFO 2025-09-04 22:49:39,397 basehttp "GET /admin/projectcanvas/user/15/change/ HTTP/1.1" 200 25520
+INFO 2025-09-04 22:49:39,449 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-04 22:49:39,549 log Not Found: /favicon.ico
+INFO 2025-09-04 22:49:42,660 basehttp "GET /admin/projectcanvas/user/15/delete/ HTTP/1.1" 200 7931
+INFO 2025-09-04 22:49:42,709 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-09-04 22:49:44,962 basehttp "POST /admin/projectcanvas/user/15/delete/ HTTP/1.1" 302 0
+INFO 2025-09-04 22:49:44,976 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9409
+INFO 2025-09-04 22:49:45,058 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-04 22:49:45,141 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-09-05 09:49:37,127 autoreload Watching for file changes with StatReloader
+INFO 2025-09-05 09:49:39,856 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-05 09:49:39,995 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+WARNING 2025-09-05 09:49:40,334 log Not Found: /favicon.ico
+INFO 2025-09-05 09:49:40,334 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-05 09:49:40,380 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-09-05 09:49:42,214 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-05 09:49:42,297 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,301 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,302 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,308 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,308 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,311 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,312 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,313 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,315 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,316 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,317 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,319 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-05 09:49:42,349 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-09-05 09:49:42,352 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-09-05 09:49:42,356 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,357 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-05 09:49:42,359 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+WARNING 2025-09-05 09:49:42,535 log Not Found: /favicon.ico
+INFO 2025-09-05 09:50:14,723 basehttp "OPTIONS /api/signup/ HTTP/1.1" 200 0
+INFO 2025-09-05 09:50:21,212 basehttp "POST /api/signup/ HTTP/1.1" 200 132
+INFO 2025-09-05 09:50:56,602 basehttp "GET /api/verify-email/2e7a68cc-ab1b-4dfa-83e9-7c18974ba7fe/ HTTP/1.1" 200 81
