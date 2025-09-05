@@ -74,13 +74,17 @@ const Login = () => {
       const data = await response.json();
       
       if (response.ok) {
-        // Store user info in localStorage or state management
+        // Store user info in localStorage
         localStorage.setItem('user', JSON.stringify(data));
         
         toast.success('Login successful!');
         setTimeout(() => {
-          navigate('/');
+          navigate('/');  // Redirect to home page after login
         }, 1500);
+      } else if (data.pending) {
+        // If the email is registered but pending verification
+        localStorage.setItem('pendingVerification', formData.email);
+        navigate('/verification-pending');
       } else {
         toast.error(data.error || 'Invalid credentials');
       }
@@ -200,7 +204,7 @@ const Login = () => {
               </button>
             </div>
             
-            {/* Forgot Password Button - Added below Sign In */}
+            {/* Forgot Password Button */}
             <div className="mt-4">
               <Link
                 to="/forgot-password"
