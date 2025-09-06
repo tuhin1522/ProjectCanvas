@@ -2,32 +2,32 @@
 
 A comprehensive University Project Showcase & Analysis Platform that transforms scattered academic work into a valuable institutional resource.
 
-## 🎯 Overview
+## Overview
 
 ProjectCanvas is a modern web platform designed for universities to showcase, analyze, and discover student projects across departments. It leverages AI-powered analysis to automatically generate project documentation, identify technology trends, and facilitate collaboration between students and faculty.
 
-## ✨ Key Features
+## Key Features
 
-### 🚀 For Students
+###  For Students
 - **Automated Project Showcase**: Upload project files and get AI-generated documentation pages
 - **Smart Discovery**: Find related projects through intelligent similarity detection
 - **Professional Portfolios**: Create impressive project portfolios for potential employers
 - **Collaboration Hub**: Connect with peers working on similar technologies
 - **Blog Platform**: Share insights, tutorials, and project ideas with the community
 
-### 📊 For Faculty & Departments
+### For Faculty & Departments
 - **Technology Trend Analysis**: Track popular programming languages and frameworks
 - **Project Analytics**: Monitor student collaboration patterns and project themes
 - **Institutional Showcase**: Highlight departmental achievements to prospective students
 - **Research Insights**: Identify emerging trends in student work
 
-### 🤖 AI-Powered Features
+###  AI-Powered Features
 - **Automatic Documentation Generation**: Uses Google Gemini AI to analyze project files
 - **Technology Tag Extraction**: Automatically identifies programming languages and frameworks
 - **Project Similarity Detection**: Finds related projects to encourage collaboration
 - **Content Analysis**: Generates comprehensive project descriptions from uploaded documentation
 
-## 🏗️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **React 18** with Vite for fast development
@@ -89,7 +89,7 @@ ProjectCanvas/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ProjectCanvas.git
+   git clone https://github.com/tuhin1522/ProjectCanvas.git
    cd ProjectCanvas
    ```
 
@@ -102,8 +102,6 @@ ProjectCanvas/
    python -m venv venv
    
    # Activate virtual environment
-   # On Windows:
-   venv\Scripts\activate
    # On macOS/Linux:
    source venv/bin/activate
    
@@ -199,7 +197,7 @@ The platform automatically:
 - Identifies similar projects
 - Creates professional showcase pages
 
-## 🌟 Key Features Explained
+## Key Features Explained
 
 ### AI-Powered Project Analysis
 
@@ -226,7 +224,7 @@ Faculty and administrators can:
 - Showcase departmental achievements
 - Identify emerging research areas
 
-## 🔒 Security Features
+## Security Features
 
 - **Email verification** for user registration
 - **CSRF protection** for form submissions
@@ -234,7 +232,7 @@ Faculty and administrators can:
 - **SQL injection protection** through Django ORM
 - **Cross-origin request** handling with CORS
 
-## 📱 Responsive Design
+## Responsive Design
 
 ProjectCanvas is fully responsive and works seamlessly across:
 - Desktop computers
@@ -242,7 +240,7 @@ ProjectCanvas is fully responsive and works seamlessly across:
 - Mobile devices
 - Various screen sizes and orientations
 
-## 🚧 Development
+## Development
 
 ### Running Tests
 
@@ -256,11 +254,6 @@ cd frontend
 npm run test
 ```
 
-### Code Style
-
-- **Frontend**: ESLint configuration for React/JavaScript
-- **Backend**: PEP 8 Python style guidelines
-- **CSS**: Tailwind CSS utility classes
 
 ### Contributing
 
@@ -270,7 +263,7 @@ npm run test
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📋 API Endpoints
+## API Endpoints
 
 ### Project Management
 - `POST /upload-project/` - Upload new project
@@ -289,27 +282,8 @@ npm run test
 - `POST /verify-email/<token>/` - Email verification
 - `POST /forgot-password/` - Password reset request
 
-## 🌐 Deployment
+## Deployment
 
-### Production Setup
-
-1. **Environment Variables**
-   ```bash
-   export DEBUG=False
-   export ALLOWED_HOSTS=yourdomain.com
-   export DATABASE_URL=mysql://user:pass@host:port/db
-   export GEMINI_API_KEY=your_api_key
-   ```
-
-2. **Static Files**
-   ```bash
-   python manage.py collectstatic
-   ```
-
-3. **Database Migration**
-   ```bash
-   python manage.py migrate
-   ```
 
 ### Recommended Hosting
 
@@ -317,18 +291,18 @@ npm run test
 - **Backend**: AWS EC2, Google Cloud Run, or DigitalOcean
 - **Database**: AWS RDS, Google Cloud SQL, or managed MySQL
 
-## 🤝 Support
+## Support
 
 For support and questions:
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ProjectCanvas/issues)
+- **Issues**: [GitHub Issues](https://github.com/tuhin1522/ProjectCanvas/issues)
 - **Documentation**: Check this README and code comments
-- **Email**: support@projectcanvas.edu
+- **Email**: mdtuhin1499@gmail.com & pranticpaulshimul@gmail.com
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Google Gemini AI** for intelligent content analysis
 - **Django Community** for the robust web framework
@@ -336,7 +310,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Tailwind CSS** for the utility-first CSS framework
 - **University Faculty** for feedback and requirements
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - **Real-time collaboration** features
 - **Advanced analytics** dashboard
@@ -350,4 +324,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **ProjectCanvas** - Transforming University Projects into Institutional Value ✨
 
-For more information, visit our [documentation](docs/) or [contact us](mailto:support@projectcanvas.edu).
+For more information, visit our [documentation](docs/) or [contact us](mailto:pranticpaulshimul@gmail.com).
