@@ -442,3 +442,4 @@ INFO 2025-09-05 09:50:14,723 basehttp "OPTIONS /api/signup/ HTTP/1.1" 200 0
 INFO 2025-09-05 09:50:21,212 basehttp "POST /api/signup/ HTTP/1.1" 200 132
 INFO 2025-09-05 09:50:56,602 basehttp "GET /api/verify-email/2e7a68cc-ab1b-4dfa-83e9-7c18974ba7fe/ HTTP/1.1" 200 81
 INFO 2025-09-05 10:46:44,225 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:15:42,688 autoreload Watching for file changes with StatReloader
