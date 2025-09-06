@@ -442,3 +442,605 @@ INFO 2025-09-05 09:50:14,723 basehttp "OPTIONS /api/signup/ HTTP/1.1" 200 0
 INFO 2025-09-05 09:50:21,212 basehttp "POST /api/signup/ HTTP/1.1" 200 132
 INFO 2025-09-05 09:50:56,602 basehttp "GET /api/verify-email/2e7a68cc-ab1b-4dfa-83e9-7c18974ba7fe/ HTTP/1.1" 200 81
 INFO 2025-09-05 10:46:44,225 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:09:01,388 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:09:24,234 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:09:24,234 basehttp "POST /api/upload-project/ HTTP/1.1" 500 42
+ERROR 2025-09-06 06:09:30,576 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:09:30,576 basehttp "POST /api/upload-project/ HTTP/1.1" 500 42
+INFO 2025-09-06 06:13:16,058 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:13:51,045 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:13:51,046 basehttp "POST /api/upload-project/ HTTP/1.1" 500 42
+INFO 2025-09-06 06:18:05,579 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:18:05,876 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:18:09,019 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:18:09,318 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:21:21,665 log Internal Server Error: /api/upload-project/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 395, in upload_project
+    project = Project.objects.create(
+              ^^^^^^^
+NameError: name 'Project' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 440, in upload_project
+    tb = traceback.format_exc()
+         ^^^^^^^^^
+NameError: name 'traceback' is not defined. Did you forget to import 'traceback'
+ERROR 2025-09-06 06:21:21,669 basehttp "POST /api/upload-project/ HTTP/1.1" 500 79994
+INFO 2025-09-06 06:22:49,838 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:22:50,163 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:22:57,891 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:23:15,667 views upload_project exception: name 'Project' is not defined
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 396, in upload_project
+    project = Project.objects.create(
+              ^^^^^^^
+NameError: name 'Project' is not defined
+
+ERROR 2025-09-06 06:23:15,668 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:23:15,668 basehttp "POST /api/upload-project/ HTTP/1.1" 500 293
+ERROR 2025-09-06 06:29:29,229 views upload_project exception: name 'Project' is not defined
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 396, in upload_project
+    project = Project.objects.create(
+              ^^^^^^^
+NameError: name 'Project' is not defined
+
+ERROR 2025-09-06 06:29:29,229 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:29:29,229 basehttp "POST /api/upload-project/ HTTP/1.1" 500 293
+INFO 2025-09-06 06:31:44,223 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:32:02,457 views upload_project exception: name 'os' is not defined
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 410, in upload_project
+    doc_text = extract_text_from_path(doc_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 319, in extract_text_from_path
+    ext = os.path.splitext(path)[1].lower()
+          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+
+ERROR 2025-09-06 06:32:02,458 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:32:02,458 basehttp "POST /api/upload-project/ HTTP/1.1" 500 515
+INFO 2025-09-06 06:32:30,653 autoreload /home/tuhin/ProjectCanvas/backend/backend/settings.py changed, reloading.
+INFO 2025-09-06 06:32:30,961 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 06:32:42,266 views upload_project exception: name 'os' is not defined
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 410, in upload_project
+    doc_text = extract_text_from_path(doc_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 319, in extract_text_from_path
+    ext = os.path.splitext(path)[1].lower()
+          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+
+ERROR 2025-09-06 06:32:42,267 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 06:32:42,267 basehttp "POST /api/upload-project/ HTTP/1.1" 500 515
+INFO 2025-09-06 06:33:19,354 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:33:19,672 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:33:24,823 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:33:25,132 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:33:31,219 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 06:33:31,267 basehttp "GET /api/projects/3/ HTTP/1.1" 200 23491
+INFO 2025-09-06 06:33:31,292 basehttp "GET /api/projects/3/ HTTP/1.1" 200 23491
+INFO 2025-09-06 06:35:12,856 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:13,171 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:35:20,245 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:20,518 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:35:21,570 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:21,837 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:35:31,922 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:32,185 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:35:35,245 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:35,534 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:35:54,747 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:35:55,044 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:36:04,128 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:36:04,431 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:37:00,837 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:37:01,135 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:37:05,275 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:37:05,578 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:37:20,419 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 06:37:20,470 basehttp "GET /api/projects/4/ HTTP/1.1" 200 23491
+INFO 2025-09-06 06:37:20,472 basehttp "GET /api/projects/4/ HTTP/1.1" 200 23491
+INFO 2025-09-06 06:38:35,773 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 06:38:35,798 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+INFO 2025-09-06 06:38:35,798 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+INFO 2025-09-06 06:42:38,667 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:42:38,994 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:42:55,107 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:42:55,359 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:43:34,571 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:43:34,848 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:45:21,051 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 06:45:35,506 log Not Found: /
+WARNING 2025-09-06 06:45:35,506 basehttp "GET / HTTP/1.1" 404 2305
+INFO 2025-09-06 06:45:43,654 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-06 06:45:43,669 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-09-06 06:45:43,747 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,748 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,749 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,751 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,752 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,753 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:45:43,753 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+WARNING 2025-09-06 06:45:43,823 log Not Found: /favicon.ico
+INFO 2025-09-06 06:45:51,335 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4335
+WARNING 2025-09-06 06:45:51,389 log Not Found: /favicon.ico
+INFO 2025-09-06 06:46:00,818 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4335
+INFO 2025-09-06 06:46:10,455 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4335
+INFO 2025-09-06 06:46:17,270 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-09-06 06:46:19,331 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-09-06 06:46:25,379 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-09-06 06:47:57,270 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-09-06 06:48:24,394 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-09-06 06:48:56,812 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-09-06 06:49:05,061 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-06 06:49:05,076 basehttp "GET /admin/ HTTP/1.1" 200 6651
+INFO 2025-09-06 06:49:05,167 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:05,186 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-06 06:49:05,186 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-09-06 06:49:09,991 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-06 06:49:10,036 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,036 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,039 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,039 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,039 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,039 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,040 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,042 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,043 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,044 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-06 06:49:10,045 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 06:49:10,098 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+WARNING 2025-09-06 06:49:10,153 log Not Found: /favicon.ico
+INFO 2025-09-06 06:50:03,654 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:50:03,976 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:51:23,342 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:51:23,621 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:52:22,910 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:52:23,173 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:52:32,425 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:52:42,361 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-06 06:52:42,399 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 06:52:42,521 log Not Found: /favicon.ico
+INFO 2025-09-06 06:52:51,649 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-06 06:52:51,690 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 06:54:08,234 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:54:25,596 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 06:54:43,961 log Not Found: /
+WARNING 2025-09-06 06:54:43,962 basehttp "GET / HTTP/1.1" 404 2305
+INFO 2025-09-06 06:54:51,291 basehttp "GET /admin/ HTTP/1.1" 200 6651
+INFO 2025-09-06 06:54:51,355 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-09-06 06:54:51,355 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-06 06:55:26,378 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 06:55:26,425 basehttp "GET /api/projects/6/ HTTP/1.1" 200 30101
+INFO 2025-09-06 06:55:26,478 basehttp "GET /api/projects/6/ HTTP/1.1" 200 30101
+INFO 2025-09-06 06:57:38,946 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:57:39,254 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 06:59:15,246 basehttp "GET /api/projects/6/ HTTP/1.1" 200 30101
+INFO 2025-09-06 06:59:55,052 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 06:59:55,351 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:33:33,284 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:33:33,581 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 07:34:12,449 views Gemini call failed: name 'requests' is not defined
+INFO 2025-09-06 07:34:12,459 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 07:34:12,494 basehttp "GET /api/projects/7/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:12,536 basehttp "GET /api/projects/7/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:23,078 basehttp "GET /admin/ HTTP/1.1" 200 6651
+INFO 2025-09-06 07:34:24,875 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 9241
+INFO 2025-09-06 07:34:24,917 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 07:34:24,985 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+WARNING 2025-09-06 07:34:25,031 log Not Found: /favicon.ico
+INFO 2025-09-06 07:34:28,000 basehttp "GET /admin/ HTTP/1.1" 200 6651
+INFO 2025-09-06 07:34:39,168 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:34:39,485 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:34:43,067 basehttp "GET /api/projects/7/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:43,075 basehttp "GET /api/projects/7/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:56,121 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 07:34:56,157 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:56,191 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:58,702 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:34:58,702 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:35:15,875 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:35:16,180 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:35:19,478 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:35:19,489 basehttp "GET /api/projects/8/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:35:30,465 basehttp "POST /api/upload-project/ HTTP/1.1" 200 17
+INFO 2025-09-06 07:35:30,506 basehttp "GET /api/projects/9/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:35:30,529 basehttp "GET /api/projects/9/ HTTP/1.1" 200 23557
+INFO 2025-09-06 07:35:38,529 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:35:38,827 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:39:59,154 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:39:59,461 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:40:53,073 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+INFO 2025-09-06 07:40:53,074 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+INFO 2025-09-06 07:41:01,782 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+INFO 2025-09-06 07:41:01,783 basehttp "GET /api/projects/5/ HTTP/1.1" 200 30027
+WARNING 2025-09-06 07:41:11,153 log Not Found: /api/projects/FitGaurd-App-master_ekzgzRS.zip/
+WARNING 2025-09-06 07:41:11,153 log Not Found: /api/projects/FitGaurd-App-master_ekzgzRS.zip/
+WARNING 2025-09-06 07:41:11,153 basehttp "GET /api/projects/FitGaurd-App-master_ekzgzRS.zip/ HTTP/1.1" 404 4527
+WARNING 2025-09-06 07:41:11,154 basehttp "GET /api/projects/FitGaurd-App-master_ekzgzRS.zip/ HTTP/1.1" 404 4527
+ERROR 2025-09-06 07:41:52,625 views Gemini API error: name 'requests' is not defined
+INFO 2025-09-06 07:41:52,636 basehttp "POST /api/upload-project/ HTTP/1.1" 200 18
+INFO 2025-09-06 07:41:52,661 basehttp "GET /api/projects/10/ HTTP/1.1" 200 23637
+INFO 2025-09-06 07:41:52,668 basehttp "GET /api/projects/10/ HTTP/1.1" 200 23637
+INFO 2025-09-06 07:42:54,590 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:42:54,916 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:42:59,983 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:43:00,248 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:43:08,410 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:43:08,717 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:43:12,858 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:43:13,174 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:43:23,258 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:43:23,538 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 07:43:38,139 views Gemini API error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyBJdv3jaa5GOAPCFKdNIdY94urMlilVxxY
+INFO 2025-09-06 07:43:38,152 basehttp "POST /api/upload-project/ HTTP/1.1" 200 18
+INFO 2025-09-06 07:43:38,204 basehttp "GET /api/projects/11/ HTTP/1.1" 200 23772
+INFO 2025-09-06 07:43:38,208 basehttp "GET /api/projects/11/ HTTP/1.1" 200 23772
+INFO 2025-09-06 07:45:25,420 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:45:25,759 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:45:30,926 basehttp "GET /api/projects/11/ HTTP/1.1" 200 23772
+INFO 2025-09-06 07:45:30,935 basehttp "GET /api/projects/11/ HTTP/1.1" 200 23772
+ERROR 2025-09-06 07:45:44,047 views Gemini API error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyBJdv3jaa5GOAPCFKdNIdY94urMlilVxxY
+INFO 2025-09-06 07:45:44,058 basehttp "POST /api/upload-project/ HTTP/1.1" 200 18
+INFO 2025-09-06 07:45:44,099 basehttp "GET /api/projects/12/ HTTP/1.1" 200 23768
+INFO 2025-09-06 07:45:44,143 basehttp "GET /api/projects/12/ HTTP/1.1" 200 23768
+INFO 2025-09-06 07:55:25,562 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-06 07:55:25,911 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:55:28,052 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-06 07:55:28,336 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:55:41,581 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-06 07:55:41,934 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:57:34,746 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:57:35,051 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:58:31,523 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:58:31,831 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:59:00,156 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:59:00,468 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:59:01,659 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 07:59:01,959 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:59:24,253 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-06 07:59:24,577 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:59:25,754 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-06 07:59:26,054 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 07:59:29,240 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-06 07:59:29,542 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-06 08:03:01,747 log Internal Server Error: /api/projects/12/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'projectcanvas_project.description' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 496, in get_project
+    project = Project.objects.get(pk=pk)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'projectcanvas_project.description' in 'field list'")
+ERROR 2025-09-06 08:03:01,758 basehttp "GET /api/projects/12/ HTTP/1.1" 500 182271
+ERROR 2025-09-06 08:03:01,782 log Internal Server Error: /api/projects/12/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'projectcanvas_project.description' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 496, in get_project
+    project = Project.objects.get(pk=pk)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'projectcanvas_project.description' in 'field list'")
+ERROR 2025-09-06 08:03:01,784 basehttp "GET /api/projects/12/ HTTP/1.1" 500 182271
+ERROR 2025-09-06 08:04:21,831 views upload_project exception: (1054, "Unknown column 'description' in 'field list'")
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'description' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 439, in upload_project
+    project = Project.objects.create(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'description' in 'field list'")
+
+ERROR 2025-09-06 08:04:21,831 log Internal Server Error: /api/upload-project/
+ERROR 2025-09-06 08:04:21,832 basehttp "POST /api/upload-project/ HTTP/1.1" 500 5185
+INFO 2025-09-06 08:06:25,183 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:07:13,674 basehttp "POST /api/upload-project/ HTTP/1.1" 200 36
+INFO 2025-09-06 08:10:36,845 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:10:37,162 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:12:39,119 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:12:39,449 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:13:43,893 log Not Found: /upload-project/
+WARNING 2025-09-06 08:13:43,900 basehttp "POST /upload-project/ HTTP/1.1" 404 2369
+INFO 2025-09-06 08:18:57,012 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-06 08:18:57,341 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:18:58,567 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-06 08:18:58,900 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:00,460 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:00,824 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:03,056 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:03,355 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:05,575 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:05,875 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:09,948 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:10,218 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:12,436 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:12,768 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:14,016 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:20:14,310 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:48,716 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-06 08:20:49,040 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:20:50,246 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-06 08:20:50,541 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:26:20,757 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:26:50,659 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:27:07,932 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:27:07,933 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:27:07,939 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:27:07,939 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:28:31,923 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:28:31,927 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:28:31,927 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:28:31,927 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+INFO 2025-09-06 08:32:08,882 autoreload /home/tuhin/ProjectCanvas/backend/backend/urls.py changed, reloading.
+INFO 2025-09-06 08:32:09,217 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:32:59,612 autoreload /home/tuhin/ProjectCanvas/backend/backend/urls.py changed, reloading.
+INFO 2025-09-06 08:32:59,962 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:34:12,918 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:35:44,735 log Not Found: /blog/create/
+WARNING 2025-09-06 08:35:44,735 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+INFO 2025-09-06 08:40:01,285 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:40:01,606 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:40:42,222 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:41:20,230 log Not Found: /blog/create/
+WARNING 2025-09-06 08:41:20,231 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+WARNING 2025-09-06 08:41:34,035 log Not Found: /blog/create/
+WARNING 2025-09-06 08:41:34,036 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+INFO 2025-09-06 08:42:54,293 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:42:54,682 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:43:00,886 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-06 08:43:01,208 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:43:08,998 log Not Found: /blog/create/
+WARNING 2025-09-06 08:43:08,999 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+INFO 2025-09-06 08:44:09,966 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/admin.py changed, reloading.
+INFO 2025-09-06 08:44:10,293 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 08:45:42,863 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:46:34,921 log Not Found: /blog/create/
+WARNING 2025-09-06 08:46:34,921 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+WARNING 2025-09-06 08:47:24,820 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:47:24,824 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:47:24,824 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:47:24,824 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:47:34,270 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:47:34,273 log Not Found: /blog/posts/
+WARNING 2025-09-06 08:47:34,273 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 08:47:34,273 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+INFO 2025-09-06 08:48:03,227 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-06 08:48:03,245 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2025-09-06 08:48:11,427 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+WARNING 2025-09-06 08:48:11,476 log Not Found: /favicon.ico
+INFO 2025-09-06 08:48:34,013 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+WARNING 2025-09-06 08:48:34,060 log Not Found: /favicon.ico
+INFO 2025-09-06 08:50:03,561 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-06 08:50:03,579 basehttp "GET /admin/ HTTP/1.1" 200 8610
+INFO 2025-09-06 08:50:08,071 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 9364
+INFO 2025-09-06 08:50:08,108 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-09-06 08:50:08,112 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 08:50:08,149 log Not Found: /favicon.ico
+INFO 2025-09-06 08:50:10,150 basehttp "GET /admin/projectcanvas/pendinguser/ HTTP/1.1" 200 9385
+INFO 2025-09-06 08:50:10,194 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 08:50:10,224 log Not Found: /favicon.ico
+INFO 2025-09-06 08:50:11,565 basehttp "GET /admin/projectcanvas/project/ HTTP/1.1" 200 10641
+INFO 2025-09-06 08:50:11,600 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 08:50:16,302 basehttp "GET /admin/projectcanvas/project/1/change/ HTTP/1.1" 200 45057
+INFO 2025-09-06 08:50:16,341 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-09-06 08:50:16,344 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-09-06 08:50:16,345 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-09-06 08:50:16,345 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 08:50:16,355 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+WARNING 2025-09-06 08:51:11,011 log Not Found: /blog/create/
+WARNING 2025-09-06 08:51:11,012 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+WARNING 2025-09-06 08:51:29,365 log Not Found: /blog/create/
+WARNING 2025-09-06 08:51:29,365 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+INFO 2025-09-06 08:53:23,122 autoreload /home/tuhin/ProjectCanvas/backend/backend/settings.py changed, reloading.
+INFO 2025-09-06 08:53:23,494 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-06 08:53:52,852 log Not Found: /blog/create/
+WARNING 2025-09-06 08:53:52,853 basehttp "GET /blog/create/ HTTP/1.1" 404 2359
+INFO 2025-09-06 08:54:36,073 autoreload Watching for file changes with StatReloader

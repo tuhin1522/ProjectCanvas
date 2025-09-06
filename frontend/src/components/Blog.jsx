@@ -9,81 +9,109 @@ const Blog = () => {
     category: '',
   });
   
-  // Mock blog data - replace with actual API call
+  // Fetch blog posts from API
   useEffect(() => {
-    // Simulating API fetch
-    setTimeout(() => {
-      setArticles([
-        {
-          id: 1,
-          title: "How to Structure Your First Machine Learning Project",
-          excerpt: "A guide to organizing code, data, and documentation for better collaboration and reproducibility in ML projects.",
-          author: "Dr. Sarah Chen",
-          authorRole: "Associate Professor",
-          category: "Machine Learning",
-          date: "2023-09-15",
-          readTime: 8,
-          image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3"
-        },
-        {
-          id: 2,
-          title: "Building Accessible Web Applications: A Student's Guide",
-          excerpt: "Learn how to make your web projects inclusive and accessible to all users, including those with disabilities.",
-          author: "James Wilson",
-          authorRole: "Final Year Student",
-          category: "Web Development",
-          date: "2023-08-22",
-          readTime: 6,
-          image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3"
-        },
-        {
-          id: 3,
-          title: "From Classroom to Production: Deploying Your First API",
-          excerpt: "A step-by-step walkthrough of taking your backend project from a local environment to a production server.",
-          author: "Miguel Rodriguez",
-          authorRole: "Graduate Assistant",
-          category: "Backend Development",
-          date: "2023-07-30",
-          readTime: 10,
-          image: "https://images.unsplash.com/photo-1573495612937-f978cc14e431?ixlib=rb-4.0.3"
-        },
-        {
-          id: 4,
-          title: "Cross-Department Collaboration: Engineering Meets Design",
-          excerpt: "How engineering and design students collaborated to create an award-winning smart home interface.",
-          author: "Prof. Emily Parker & Prof. David Kim",
-          authorRole: "Faculty Members",
-          category: "Collaboration",
-          date: "2023-06-18",
-          readTime: 7,
-          image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3"
-        },
-        {
-          id: 5,
-          title: "Research Paper to Software: Turning Academic Ideas into Working Code",
-          excerpt: "The journey of implementing theoretical concepts from a research paper into functional software.",
-          author: "Dr. Alan Johnson",
-          authorRole: "Research Supervisor",
-          category: "Research",
-          date: "2023-05-09",
-          readTime: 12,
-          image: "https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?ixlib=rb-4.0.3"
-        },
-        {
-          id: 6,
-          title: "Optimizing Your GitHub Profile for Employers",
-          excerpt: "How to structure your projects and GitHub profile to stand out to potential employers and showcase your skills.",
-          author: "Lisa Zhang",
-          authorRole: "Career Advisor",
-          category: "Career",
-          date: "2023-04-14",
-          readTime: 5,
-          image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3"
-        }
-      ]);
+    fetchBlogPosts();
+  }, [filters]);
+
+  const fetchBlogPosts = async () => {
+    try {
+      setLoading(true);
+      const params = new URLSearchParams();
+      
+      if (filters.search) params.append('search', filters.search);
+      if (filters.category) params.append('category', filters.category);
+      
+      const response = await fetch(`http://localhost:8000/blog/posts/?${params}`);
+      const data = await response.json();
+      
+      if (data.success) {
+        setArticles(data.posts);
+      } else {
+        console.error('Failed to fetch blog posts:', data.error);
+        // Fall back to mock data if API fails
+        setMockData();
+      }
+    } catch (error) {
+      console.error('Error fetching blog posts:', error);
+      // Fall back to mock data if API fails
+      setMockData();
+    } finally {
       setLoading(false);
-    }, 1000);
-  }, []);
+    }
+  };
+
+  // Fallback mock data function
+  const setMockData = () => {
+    setArticles([
+      {
+        id: 1,
+        title: "How to Structure Your First Machine Learning Project",
+        excerpt: "A guide to organizing code, data, and documentation for better collaboration and reproducibility in ML projects.",
+        author: "Dr. Sarah Chen",
+        authorRole: "Associate Professor",
+        category: "Machine Learning",
+        date: "2023-09-15T00:00:00Z",
+        readTime: 8,
+        image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3"
+      },
+      {
+        id: 2,
+        title: "Building Accessible Web Applications: A Student's Guide",
+        excerpt: "Learn how to make your web projects inclusive and accessible to all users, including those with disabilities.",
+        author: "James Wilson",
+        authorRole: "Final Year Student",
+        category: "Web Development",
+        date: "2023-08-22T00:00:00Z",
+        readTime: 6,
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3"
+      },
+      {
+        id: 3,
+        title: "From Classroom to Production: Deploying Your First API",
+        excerpt: "A step-by-step walkthrough of taking your backend project from a local environment to a production server.",
+        author: "Miguel Rodriguez",
+        authorRole: "Graduate Assistant",
+        category: "Backend Development",
+        date: "2023-07-30T00:00:00Z",
+        readTime: 10,
+        image: "https://images.unsplash.com/photo-1573495612937-f978cc14e431?ixlib=rb-4.0.3"
+      },
+      {
+        id: 4,
+        title: "Cross-Department Collaboration: Engineering Meets Design",
+        excerpt: "How engineering and design students collaborated to create an award-winning smart home interface.",
+        author: "Prof. Emily Parker & Prof. David Kim",
+        authorRole: "Faculty Members",
+        category: "Collaboration",
+        date: "2023-06-18T00:00:00Z",
+        readTime: 7,
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3"
+      },
+      {
+        id: 5,
+        title: "Research Paper to Software: Turning Academic Ideas into Working Code",
+        excerpt: "The journey of implementing theoretical concepts from a research paper into functional software.",
+        author: "Dr. Alan Johnson",
+        authorRole: "Research Supervisor",
+        category: "Research",
+        date: "2023-05-09T00:00:00Z",
+        readTime: 12,
+        image: "https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?ixlib=rb-4.0.3"
+      },
+      {
+        id: 6,
+        title: "Optimizing Your GitHub Profile for Employers",
+        excerpt: "How to structure your projects and GitHub profile to stand out to potential employers and showcase your skills.",
+        author: "Lisa Zhang",
+        authorRole: "Career Advisor",
+        category: "Career",
+        date: "2023-04-14T00:00:00Z",
+        readTime: 5,
+        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3"
+      }
+    ]);
+  };
 
   // Get unique categories for filter
   const categories = [...new Set(articles.map(article => article.category))];
@@ -96,7 +124,7 @@ const Blog = () => {
     });
   };
 
-  // Apply filters to articles
+  // Apply filters to articles (for client-side filtering when needed)
   const filteredArticles = articles.filter(article => {
     return (
       (filters.search === '' || 
@@ -164,40 +192,40 @@ const Blog = () => {
         </div>
         
         {/* Featured Article */}
-        {!loading && filteredArticles.length > 0 && (
+        {!loading && articles.length > 0 && (
           <div className="mb-12">
-            <Link to={`/blog/${filteredArticles[0].id}`} className="block">
+            <Link to={`/blog/${articles[0].id}`} className="block">
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="h-64 md:h-auto overflow-hidden">
                     <img 
-                      src={filteredArticles[0].image} 
-                      alt={filteredArticles[0].title} 
+                      src={articles[0].image} 
+                      alt={articles[0].title} 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="flex items-center mb-4">
                       <span className="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">
-                        {filteredArticles[0].category}
+                        {articles[0].category}
                       </span>
                       <span className="ml-2 text-gray-500 text-sm">
-                        {formatDate(filteredArticles[0].date)}
+                        {formatDate(articles[0].date)}
                       </span>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">{filteredArticles[0].title}</h2>
-                    <p className="text-gray-600 mb-6">{filteredArticles[0].excerpt}</p>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">{articles[0].title}</h2>
+                    <p className="text-gray-600 mb-6">{articles[0].excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
                         <div className="h-10 w-10 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold text-xl">
-                          {filteredArticles[0].author.charAt(0)}
+                          {articles[0].author.charAt(0)}
                         </div>
                         <div className="ml-3">
-                          <p className="text-sm font-medium text-gray-900">{filteredArticles[0].author}</p>
-                          <p className="text-xs text-gray-500">{filteredArticles[0].authorRole}</p>
+                          <p className="text-sm font-medium text-gray-900">{articles[0].author}</p>
+                          <p className="text-xs text-gray-500">{articles[0].authorRole}</p>
                         </div>
                       </div>
-                      <span className="text-sm text-gray-500">{filteredArticles[0].readTime} min read</span>
+                      <span className="text-sm text-gray-500">{articles[0].readTime} min read</span>
                     </div>
                   </div>
                 </div>
@@ -211,10 +239,10 @@ const Blog = () => {
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
           </div>
-        ) : filteredArticles.length > 0 ? (
+        ) : articles.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Skip the first article as it's the featured one */}
-            {filteredArticles.slice(1).map(article => (
+            {articles.slice(1).map(article => (
               <Link to={`/blog/${article.id}`} key={article.id} className="block">
                 <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all h-full flex flex-col">
                   <div className="h-48 overflow-hidden">
@@ -268,7 +296,7 @@ const Blog = () => {
               />
             </svg>
             <h3 className="mt-2 text-lg font-medium text-gray-900">No articles found</h3>
-            <p className="mt-1 text-gray-500">Try adjusting your search criteria.</p>
+            <p className="mt-1 text-gray-500">Try adjusting your search criteria or be the first to write an article!</p>
           </div>
         )}
         
@@ -276,7 +304,7 @@ const Blog = () => {
         <div className="mt-12 bg-indigo-600 rounded-xl p-8 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-3">Share Your Knowledge</h3>
           <p className="mb-6 max-w-2xl mx-auto">
-            Have insights, tutorials, or stories to share? Contribute to our community by writing an article.
+            Have insights, tutorials, or project ideas to share? Contribute to our community by writing an article.
           </p>
           <Link 
             to="/blog/write"
@@ -285,6 +313,29 @@ const Blog = () => {
             Write an Article
           </Link>
         </div>
+        
+        {/* Statistics Section */}
+        {articles.length > 0 && (
+          <div className="mt-12 bg-white rounded-xl shadow-md p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Blog Statistics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-600">{articles.length}</div>
+                <div className="text-sm text-gray-600">Total Articles</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-600">{categories.length}</div>
+                <div className="text-sm text-gray-600">Categories</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-600">
+                  {Math.round(articles.reduce((sum, article) => sum + article.readTime, 0) / articles.length)}
+                </div>
+                <div className="text-sm text-gray-600">Avg. Read Time (min)</div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

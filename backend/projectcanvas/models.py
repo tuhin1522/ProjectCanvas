@@ -94,3 +94,68 @@ class PendingUser(models.Model):
     
     class Meta:
         db_table = 'pending_users'
+
+class Project(models.Model):
+    # Basic Information
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)  # Add project description
+    author_name = models.CharField(max_length=255, blank=True)  # Add author info
+    author_email = models.EmailField(blank=True)
+    department = models.CharField(max_length=100, blank=True)
+    academic_year = models.CharField(max_length=20, blank=True)
+    supervisor = models.CharField(max_length=255, blank=True)
+    
+    # Files
+    project_file = models.FileField(upload_to='projects/')
+    documentation_file = models.FileField(upload_to='documentation/', null=True, blank=True)
+    documentation_text = models.TextField(blank=True)
+    analysis_text = models.TextField(blank=True)
+    
+    # Project Details
+    project_type = models.CharField(max_length=50, blank=True)
+    technologies_used = models.JSONField(default=list, blank=True)  # Store as array
+    is_open_source = models.BooleanField(default=True)
+    github_link = models.URLField(blank=True)
+    live_demo_link = models.URLField(blank=True)
+    
+    # Media
+    screenshots = models.JSONField(default=list, blank=True)
+    
+    # Status
+    is_published = models.BooleanField(default=False)  # Add publish status
+    is_draft = models.BooleanField(default=True)  # Add draft status
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    excerpt = models.TextField(max_length=500)
+    content = models.TextField()
+    category = models.CharField(max_length=100)
+    tags = models.JSONField(default=list, blank=True)
+    author_name = models.CharField(max_length=100)
+    author_email = models.EmailField()
+    author_role = models.CharField(max_length=100, blank=True)
+    cover_image = models.ImageField(upload_to='blog_covers/', blank=True, null=True)
+    estimated_read_time = models.IntegerField(default=5)
+    is_published = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return self.title
+    
+    @property
+    def cover_image_url(self):
+        if self.cover_image:
+            return self.cover_image.url
+        return None

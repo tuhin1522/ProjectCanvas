@@ -11,7 +11,8 @@ import VerificationPending from './components/VerificationPending'
 import ResendVerification from './components/ResendVerification'
 import ForgotPassword from './components/ForgotPassword'
 import ResetPassword from './components/ResetPassword'
-// import Logout from './components/Logout'
+import ProjectPage from './components/ProjectPage';
+import WriteBlog from './components/WriteBlog';
 
 function App() {
   return (
@@ -24,14 +25,15 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/blog/" element={<Blog />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/write" element={<WriteBlog />} />
             <Route path="/upload" element={<Upload />} />
+            <Route path="/projects/:id" element={<ProjectPage />} />
             <Route path="/verify-email/:token" element={<VerifyEmail />} />
             <Route path="/verification-pending" element={<VerificationPending />} />
             <Route path="/resend-verification" element={<ResendVerification />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
-            {/* <Route path="/logout" element={<Logout />} /> */}
           </Routes>
         </div>
       </BrowserRouter>
