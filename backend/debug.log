@@ -1044,3 +1044,61 @@ INFO 2025-09-06 08:53:23,494 autoreload Watching for file changes with StatReloa
 WARNING 2025-09-06 08:53:52,852 log Not Found: /blog/create/
 WARNING 2025-09-06 08:53:52,853 basehttp "GET /blog/create/ HTTP/1.1" 404 2359
 INFO 2025-09-06 08:54:36,073 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:40:44,639 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:42:11,910 basehttp "GET /admin/projectcanvas/project/ HTTP/1.1" 200 10641
+WARNING 2025-09-06 09:42:11,989 log Not Found: /favicon.ico
+WARNING 2025-09-06 09:42:18,424 log Not Found: /api/projects/5/
+WARNING 2025-09-06 09:42:18,424 basehttp "GET /api/projects/5/ HTTP/1.1" 404 22
+WARNING 2025-09-06 09:42:18,428 log Not Found: /api/projects/5/
+WARNING 2025-09-06 09:42:18,428 basehttp "GET /api/projects/5/ HTTP/1.1" 404 22
+WARNING 2025-09-06 09:42:18,758 log Not Found: /api/projects/5/
+WARNING 2025-09-06 09:42:18,758 basehttp "GET /api/projects/5/ HTTP/1.1" 404 22
+WARNING 2025-09-06 09:42:18,759 log Not Found: /api/projects/5/
+WARNING 2025-09-06 09:42:18,759 basehttp "GET /api/projects/5/ HTTP/1.1" 404 22
+WARNING 2025-09-06 09:42:24,151 log Not Found: /blog/posts/
+WARNING 2025-09-06 09:42:24,154 log Not Found: /blog/posts/
+WARNING 2025-09-06 09:42:24,154 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 09:42:24,154 basehttp "GET /blog/posts/? HTTP/1.1" 404 2356
+WARNING 2025-09-06 09:44:21,081 log Not Found: /blog/create/
+WARNING 2025-09-06 09:44:21,081 basehttp "POST /blog/create/ HTTP/1.1" 404 2360
+INFO 2025-09-06 09:45:42,843 autoreload /home/tuhin/ProjectCanvas/backend/backend/urls.py changed, reloading.
+INFO 2025-09-06 09:45:43,178 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:45:56,497 autoreload /home/tuhin/ProjectCanvas/backend/backend/urls.py changed, reloading.
+INFO 2025-09-06 09:45:56,826 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:49:12,000 autoreload /home/tuhin/ProjectCanvas/backend/backend/urls.py changed, reloading.
+INFO 2025-09-06 09:49:12,296 autoreload Watching for file changes with StatReloader
+INFO 2025-09-06 09:49:38,264 basehttp "POST /blog/create/ HTTP/1.1" 200 81
+INFO 2025-09-06 09:49:40,293 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:40,294 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:48,245 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:48,245 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:50,950 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:50,955 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:58,597 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:49:58,601 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:50:10,682 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:50:10,683 basehttp "GET /blog/posts/? HTTP/1.1" 200 256
+INFO 2025-09-06 09:56:33,012 basehttp "POST /blog/create/ HTTP/1.1" 200 81
+INFO 2025-09-06 09:56:35,036 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 09:56:35,041 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 09:56:45,266 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 09:56:45,271 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 09:58:14,182 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 09:58:14,189 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 10:00:43,786 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 11025
+INFO 2025-09-06 10:00:43,832 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:00:43,898 log Not Found: /favicon.ico
+INFO 2025-09-06 10:00:46,823 basehttp "GET /admin/projectcanvas/blogpost/2/change/ HTTP/1.1" 200 19059
+INFO 2025-09-06 10:00:46,866 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 10:01:54,694 basehttp "GET /admin/projectcanvas/project/ HTTP/1.1" 200 10641
+INFO 2025-09-06 10:01:54,736 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 10:01:56,052 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 10629
+INFO 2025-09-06 10:01:56,086 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:01:56,150 log Not Found: /favicon.ico
+INFO 2025-09-06 10:02:30,467 basehttp "OPTIONS /api/signup/ HTTP/1.1" 200 0
+WARNING 2025-09-06 10:02:30,472 log Not Found: /api/signup/
+WARNING 2025-09-06 10:02:30,472 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
+WARNING 2025-09-06 10:02:43,215 log Not Found: /api/signup/
+WARNING 2025-09-06 10:02:43,216 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
+WARNING 2025-09-06 10:02:52,752 log Not Found: /api/signup/
+WARNING 2025-09-06 10:02:52,752 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
