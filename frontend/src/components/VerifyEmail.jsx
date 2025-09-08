@@ -18,7 +18,7 @@ const VerifyEmail = () => {
         requestSent.current = true;
         
         try {
-            const response = await fetch(`http://localhost:8000/api/verify-email/${token}/`);
+            const response = await fetch(`http://localhost:8000/verify-email/${token}/`);
             const data = await response.json();
             
             if (response.ok) {

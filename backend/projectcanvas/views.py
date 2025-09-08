@@ -606,9 +606,8 @@ def create_blog_post(request):
         print("POST data:", request.POST)
         print("FILES data:", request.FILES)
         
-        # Extract form data
+        # Extract form data - REMOVED excerpt
         title = request.POST.get('title', '').strip()
-        excerpt = request.POST.get('excerpt', '').strip()
         content = request.POST.get('content', '').strip()
         category = request.POST.get('category', '').strip()
         author_name = request.POST.get('authorName', '').strip()
@@ -644,10 +643,9 @@ def create_blog_post(request):
         if not author_email:
             return JsonResponse({'error': 'Author email is required'}, status=400)
         
-        # Create blog post
+        # Create blog post - REMOVED excerpt
         blog_post = BlogPost.objects.create(
             title=title,
-            excerpt=excerpt,
             content=content,
             category=category,
             tags=tags,
@@ -691,9 +689,9 @@ def get_blog_posts(request):
             posts = posts.filter(category=category)
         
         if search:
+            # REMOVED excerpt from search filter
             posts = posts.filter(
                 Q(title__icontains=search) | 
-                Q(excerpt__icontains=search) | 
                 Q(content__icontains=search)
             )
         
@@ -702,7 +700,7 @@ def get_blog_posts(request):
             posts_data.append({
                 'id': post.id,
                 'title': post.title,
-                'excerpt': post.excerpt,
+                # REMOVED excerpt from response
                 'category': post.category,
                 'tags': post.tags,
                 'author': post.author_name,
@@ -730,7 +728,7 @@ def get_blog_post(request, pk):
         post_data = {
             'id': post.id,
             'title': post.title,
-            'excerpt': post.excerpt,
+            # REMOVED excerpt from response
             'content': post.content,
             'category': post.category,
             'tags': post.tags,
@@ -751,4 +749,87 @@ def get_blog_post(request, pk):
         return JsonResponse({'error': 'Blog post not found'}, status=404)
     except Exception as e:
         logger.error(f"Get blog post error: {str(e)}")
+        return JsonResponse({'error': str(e)}, status=500)
+
+@csrf_exempt
+def update_blog_post(request, pk):
+    """Update a blog post (only by author)"""
+    if request.method != 'PUT':
+        return HttpResponseNotAllowed(['PUT'])
+
+    try:
+        blog_post = BlogPost.objects.get(pk=pk, is_published=True)
+        
+        # Extract form data
+        title = request.POST.get('title', '').strip()
+        content = request.POST.get('content', '').strip()
+        category = request.POST.get('category', '').strip()
+        author_role = request.POST.get('authorRole', '').strip()
+        
+        try:
+            estimated_read_time = int(request.POST.get('estimatedReadTime', 5))
+        except (ValueError, TypeError):
+            estimated_read_time = 5
+        
+        # Parse tags
+        tags = []
+        try:
+            tags_raw = request.POST.get('tags', '[]')
+            if tags_raw:
+                tags = json.loads(tags_raw)
+        except Exception as e:
+            print(f"Tags parsing error: {e}")
+            tags = []
+        
+        # Validation
+        if not title:
+            return JsonResponse({'error': 'Title is required'}, status=400)
+        if not content:
+            return JsonResponse({'error': 'Content is required'}, status=400)
+        if not category:
+            return JsonResponse({'error': 'Category is required'}, status=400)
+        
+        # Update blog post
+        blog_post.title = title
+        blog_post.content = content
+        blog_post.category = category
+        blog_post.tags = tags
+        blog_post.author_role = author_role
+        blog_post.estimated_read_time = estimated_read_time
+        
+        # Handle cover image if provided
+        cover_image = request.FILES.get('coverImage')
+        if cover_image:
+            blog_post.cover_image.save(cover_image.name, cover_image, save=True)
+        
+        blog_post.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Blog post updated successfully'
+        })
+        
+    except BlogPost.DoesNotExist:
+        return JsonResponse({'error': 'Blog post not found'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+@csrf_exempt
+def delete_blog_post(request, pk):
+    """Delete a blog post (only by author)"""
+    if request.method != 'DELETE':
+        return HttpResponseNotAllowed(['DELETE'])
+
+    try:
+        blog_post = BlogPost.objects.get(pk=pk, is_published=True)
+        blog_post.delete()
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Blog post deleted successfully'
+        })
+        
+    except BlogPost.DoesNotExist:
+        return JsonResponse({'error': 'Blog post not found'}, status=404)
+    except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)

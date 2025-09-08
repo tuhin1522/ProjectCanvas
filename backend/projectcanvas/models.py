@@ -97,53 +97,47 @@ class PendingUser(models.Model):
 
 class Project(models.Model):
     # Basic Information
-    title = models.CharField(max_length=255)
-    description = models.TextField(blank=True)  # Add project description
-    author_name = models.CharField(max_length=255, blank=True)  # Add author info
-    author_email = models.EmailField(blank=True)
-    department = models.CharField(max_length=100, blank=True)
-    academic_year = models.CharField(max_length=20, blank=True)
-    supervisor = models.CharField(max_length=255, blank=True)
-    
+    title = models.CharField(max_length=255, blank=True)  # You may want to add a title field in your form
+    description = models.TextField(blank=True)            # Optionally add description field
+    project_type = models.CharField(max_length=50)
+    is_open_source = models.BooleanField(default=True)
+    github_link = models.URLField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
     # Files
     project_file = models.FileField(upload_to='projects/')
     documentation_file = models.FileField(upload_to='documentation/', null=True, blank=True)
-    documentation_text = models.TextField(blank=True)
-    analysis_text = models.TextField(blank=True)
-    
-    # Project Details
-    project_type = models.CharField(max_length=50, blank=True)
-    technologies_used = models.JSONField(default=list, blank=True)  # Store as array
-    is_open_source = models.BooleanField(default=True)
-    github_link = models.URLField(blank=True)
-    live_demo_link = models.URLField(blank=True)
-    
-    # Media
-    screenshots = models.JSONField(default=list, blank=True)
-    
-    # Status
-    is_published = models.BooleanField(default=False)  # Add publish status
-    is_draft = models.BooleanField(default=True)  # Add draft status
-    
-    # Timestamps
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+    # Screenshots (up to 10)
+    # Store as separate model for multiple images
+    # See Screenshot model below
 
     def __str__(self):
-        return self.title
+        return self.title or f"Project {self.id}"
+
+class Screenshot(models.Model):
+    project = models.ForeignKey(Project, related_name='screenshots', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='screenshots/')
+
+    def __str__(self):
+        return f"Screenshot for {self.project.title or self.project.id}"
 
 
 class BlogPost(models.Model):
+    # Blog Information (from WriteBlog form)
     title = models.CharField(max_length=200)
-    excerpt = models.TextField(max_length=500)
-    content = models.TextField()
     category = models.CharField(max_length=100)
+    content = models.TextField()
+    cover_image = models.ImageField(upload_to='blog_covers/', blank=True, null=True)
     tags = models.JSONField(default=list, blank=True)
+    
+    # Author Information (auto-filled from login + form inputs)
     author_name = models.CharField(max_length=100)
     author_email = models.EmailField()
     author_role = models.CharField(max_length=100, blank=True)
-    cover_image = models.ImageField(upload_to='blog_covers/', blank=True, null=True)
     estimated_read_time = models.IntegerField(default=5)
+    
+    # System fields
     is_published = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

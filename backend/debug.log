@@ -1102,3 +1102,853 @@ WARNING 2025-09-06 10:02:43,215 log Not Found: /api/signup/
 WARNING 2025-09-06 10:02:43,216 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
 WARNING 2025-09-06 10:02:52,752 log Not Found: /api/signup/
 WARNING 2025-09-06 10:02:52,752 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
+INFO 2025-09-06 10:06:44,274 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 10629
+INFO 2025-09-06 10:06:44,318 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:06:44,355 log Not Found: /favicon.ico
+INFO 2025-09-06 10:06:48,319 basehttp "GET /admin/projectcanvas/user/?o=1 HTTP/1.1" 200 10913
+INFO 2025-09-06 10:06:48,358 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:06:48,421 log Not Found: /favicon.ico
+INFO 2025-09-06 10:06:48,426 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-09-06 10:06:54,562 basehttp "GET /admin/projectcanvas/user/add/ HTTP/1.1" 200 26921
+INFO 2025-09-06 10:06:54,599 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-06 10:06:54,604 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-09-06 10:06:54,604 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+WARNING 2025-09-06 10:06:54,710 log Not Found: /favicon.ico
+INFO 2025-09-06 10:06:54,805 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-09-06 10:06:54,805 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-09-06 10:07:09,312 basehttp "GET /admin/projectcanvas/project/ HTTP/1.1" 200 10641
+INFO 2025-09-06 10:07:09,352 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:07:09,416 log Not Found: /favicon.ico
+INFO 2025-09-06 10:07:10,519 basehttp "GET /admin/projectcanvas/user/ HTTP/1.1" 200 10629
+INFO 2025-09-06 10:07:10,555 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-06 10:07:10,624 log Not Found: /favicon.ico
+WARNING 2025-09-06 10:07:10,624 basehttp "GET /favicon.ico HTTP/1.1" 404 5973
+INFO 2025-09-06 10:12:03,378 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-06 10:12:03,378 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-08 15:10:00,509 autoreload Watching for file changes with StatReloader
+WARNING 2025-09-08 15:10:25,434 log Not Found: /
+WARNING 2025-09-08 15:10:25,434 basehttp "GET / HTTP/1.1" 404 5922
+WARNING 2025-09-08 15:10:25,563 log Not Found: /favicon.ico
+INFO 2025-09-08 15:10:34,618 basehttp "GET /admin/ HTTP/1.1" 200 8610
+INFO 2025-09-08 15:10:34,668 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,669 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,673 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,673 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,674 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,675 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,675 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:10:34,752 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-08 15:10:34,784 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+WARNING 2025-09-08 15:10:34,804 log Not Found: /favicon.ico
+INFO 2025-09-08 15:10:34,812 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-09-08 15:11:44,765 basehttp "OPTIONS /api/signup/ HTTP/1.1" 200 0
+WARNING 2025-09-08 15:11:44,770 log Not Found: /api/signup/
+WARNING 2025-09-08 15:11:44,771 basehttp "POST /api/signup/ HTTP/1.1" 404 5974
+INFO 2025-09-08 15:19:08,996 basehttp "OPTIONS /signup/ HTTP/1.1" 200 0
+INFO 2025-09-08 15:19:14,307 basehttp "POST /signup/ HTTP/1.1" 200 132
+INFO 2025-09-08 15:19:39,268 basehttp "GET /verify-email/23ccf062-ea5f-4823-8a24-7466ad945f7f/ HTTP/1.1" 200 81
+INFO 2025-09-08 15:19:51,759 basehttp "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2025-09-08 15:19:52,158 basehttp "POST /login/ HTTP/1.1" 200 144
+INFO 2025-09-08 15:23:26,701 basehttp "OPTIONS /forgot-password/ HTTP/1.1" 200 0
+INFO 2025-09-08 15:23:30,922 basehttp "POST /forgot-password/ HTTP/1.1" 200 71
+INFO 2025-09-08 15:23:57,368 basehttp "OPTIONS /reset-password/876c4e45-b035-44b4-be9e-d8ebca775add/ HTTP/1.1" 200 0
+INFO 2025-09-08 15:23:57,746 basehttp "POST /reset-password/876c4e45-b035-44b4-be9e-d8ebca775add/ HTTP/1.1" 200 41
+INFO 2025-09-08 15:34:05,302 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 15:34:05,704 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 15:35:05,472 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-08 15:35:05,482 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-08 15:35:09,975 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-08 15:35:09,987 basehttp "GET /blog/posts/? HTTP/1.1" 200 657
+INFO 2025-09-08 15:35:23,094 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 11025
+INFO 2025-09-08 15:35:23,155 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,159 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,159 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,161 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,162 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,166 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,166 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,167 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,167 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:23,173 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-08 15:35:23,173 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+WARNING 2025-09-08 15:35:23,271 log Not Found: /favicon.ico
+INFO 2025-09-08 15:35:23,273 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-09-08 15:35:30,734 basehttp "GET /admin/projectcanvas/blogpost/2/change/ HTTP/1.1" 200 19059
+INFO 2025-09-08 15:35:30,777 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:30,781 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-09-08 15:35:30,782 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-09-08 15:35:30,783 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-08 15:35:30,813 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-09-08 15:35:33,661 basehttp "GET /admin/projectcanvas/blogpost/2/delete/ HTTP/1.1" 200 9452
+INFO 2025-09-08 15:35:33,722 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2025-09-08 15:35:35,282 basehttp "POST /admin/projectcanvas/blogpost/2/delete/ HTTP/1.1" 302 0
+INFO 2025-09-08 15:35:35,311 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 10864
+INFO 2025-09-08 15:35:35,412 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-08 15:35:35,484 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-09-08 15:35:36,904 basehttp "GET /admin/projectcanvas/blogpost/1/change/ HTTP/1.1" 200 17141
+INFO 2025-09-08 15:35:36,943 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-08 15:35:39,500 basehttp "GET /admin/projectcanvas/blogpost/1/delete/ HTTP/1.1" 200 9314
+INFO 2025-09-08 15:35:41,056 basehttp "POST /admin/projectcanvas/blogpost/1/delete/ HTTP/1.1" 302 0
+INFO 2025-09-08 15:35:41,074 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 9524
+INFO 2025-09-08 15:35:41,160 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-09-08 15:41:51,868 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 15:41:51,869 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 15:42:19,646 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 15:42:19,650 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 15:55:34,389 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 9364
+INFO 2025-09-08 15:55:34,454 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-08 15:55:34,535 log Not Found: /favicon.ico
+INFO 2025-09-08 16:00:54,476 basehttp "GET /admin/projectcanvas/blogpost/ HTTP/1.1" 200 9364
+INFO 2025-09-08 16:00:54,532 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-09-08 16:00:54,536 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-09-08 16:00:54,721 log Not Found: /favicon.ico
+INFO 2025-09-08 16:19:26,014 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:19:26,390 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:19:47,766 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:19:48,102 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:19:49,342 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:19:49,724 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:19:50,974 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:19:51,318 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:19:55,580 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:19:55,945 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:20:08,244 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:20:08,583 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:20:09,834 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:20:10,194 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:20:16,476 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/models.py changed, reloading.
+INFO 2025-09-08 16:20:16,818 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:21:17,406 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 16:21:17,755 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:21:42,140 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 16:21:42,535 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:25:18,874 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 16:25:19,182 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:30:29,821 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:30:29,831 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:30:42,417 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:30:42,417 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:32:15,893 autoreload /home/tuhin/ProjectCanvas/backend/backend/settings.py changed, reloading.
+INFO 2025-09-08 16:32:16,245 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:32:17,496 autoreload /home/tuhin/ProjectCanvas/backend/backend/settings.py changed, reloading.
+INFO 2025-09-08 16:32:17,894 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:34:55,028 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 16:34:55,370 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 16:36:33,291 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:36:33,293 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:36:36,750 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:36:36,771 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:37:06,816 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:37:06,826 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+WARNING 2025-09-08 16:42:09,216 log Bad Request: /blog/create/
+WARNING 2025-09-08 16:42:09,216 basehttp "POST /blog/create/ HTTP/1.1" 400 36
+WARNING 2025-09-08 16:42:30,196 log Unauthorized: /login/
+WARNING 2025-09-08 16:42:30,197 basehttp "POST /login/ HTTP/1.1" 401 38
+WARNING 2025-09-08 16:42:39,616 log Unauthorized: /login/
+WARNING 2025-09-08 16:42:39,616 basehttp "POST /login/ HTTP/1.1" 401 38
+INFO 2025-09-08 16:43:06,673 basehttp "POST /forgot-password/ HTTP/1.1" 200 71
+WARNING 2025-09-08 16:44:52,367 log Unauthorized: /login/
+WARNING 2025-09-08 16:44:52,367 basehttp "POST /login/ HTTP/1.1" 401 38
+INFO 2025-09-08 16:45:19,229 basehttp "POST /forgot-password/ HTTP/1.1" 200 71
+INFO 2025-09-08 16:45:55,732 basehttp "POST /signup/ HTTP/1.1" 200 132
+INFO 2025-09-08 16:46:02,992 basehttp "GET /verify-email/4209536a-5e96-4022-a6d5-0da05eef766b/ HTTP/1.1" 200 81
+INFO 2025-09-08 16:46:12,593 basehttp "POST /login/ HTTP/1.1" 200 144
+INFO 2025-09-08 16:46:17,322 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+INFO 2025-09-08 16:46:17,326 basehttp "GET /blog/posts/? HTTP/1.1" 200 30
+WARNING 2025-09-08 16:47:13,159 log Bad Request: /blog/create/
+WARNING 2025-09-08 16:47:13,159 basehttp "POST /blog/create/ HTTP/1.1" 400 36
+INFO 2025-09-08 16:51:58,555 basehttp "POST /blog/create/ HTTP/1.1" 200 81
+INFO 2025-09-08 16:52:00,585 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:52:00,590 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:52:23,793 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:52:23,793 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:59:53,594 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:59:53,594 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:59:57,295 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 16:59:57,295 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:00:42,663 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:00:43,097 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:01:16,581 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:01:16,901 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:01:19,065 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:01:19,353 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:01:25,069 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:01:25,076 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:01:28,143 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:01:28,161 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:08:16,986 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:08:17,399 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:08:50,837 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:08:51,194 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:08:56,652 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:08:56,664 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:13:30,367 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:13:30,367 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:13:31,413 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:13:31,413 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:13:58,113 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:13:58,117 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:35,790 basehttp "OPTIONS /blog/posts/1/ HTTP/1.1" 200 0
+INFO 2025-09-08 17:14:35,797 basehttp "PUT /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:37,821 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:37,821 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:48,421 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:48,425 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:53,441 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:14:53,454 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:14:54,724 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:14:54,729 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:16:01,661 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:16:01,670 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:16:12,790 basehttp "PUT /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:16:14,813 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:16:14,818 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:20:39,417 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:20:39,884 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:20:52,127 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:20:52,460 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:21:21,775 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:21:22,112 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:21:23,293 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:21:23,651 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:21:27,824 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:21:28,134 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:22:50,647 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:22:50,978 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:23:05,069 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:23:05,357 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:23:08,408 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:23:08,698 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:23:19,781 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:23:20,060 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:26:03,994 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:26:04,331 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:30:38,735 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:30:39,066 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:30:49,606 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:53,835 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:53,839 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:55,396 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:55,399 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:55,418 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:55,421 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:55,423 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:55,439 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:56,401 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:56,412 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:56,413 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:56,414 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:56,435 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:56,474 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:57,038 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:57,049 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:57,051 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:57,051 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:57,072 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:57,115 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:57,601 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:57,611 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:57,613 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:57,614 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:57,636 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:57,672 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:58,364 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:58,372 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:58,378 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:58,380 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:58,390 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:58,425 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:58,854 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:58,863 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:58,866 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:58,866 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:58,886 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:58,918 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:30:59,543 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:59,554 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:30:59,556 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:30:59,557 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:30:59,631 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:30:59,636 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:32:29,879 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:29,888 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:29,892 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:32:29,892 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:32:29,927 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:32:29,927 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:32:30,870 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:30,880 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:32:30,886 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:30,890 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:32:30,929 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:32:30,933 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:32:31,496 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:31,504 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:31,508 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:32:31,508 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:32:31,537 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:32:31,570 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:32:31,837 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:31,846 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:31,850 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:32:31,850 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:32:31,873 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:32:31,903 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:32:32,538 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:32,550 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:32:32,552 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:32:32,552 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:32:32,575 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:32:32,606 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:33:19,517 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:19,531 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:19,533 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:33:19,534 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:33:19,559 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:33:19,597 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:33:20,395 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:20,404 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:20,407 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:33:20,408 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:33:20,438 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:33:20,475 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:33:21,033 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:21,044 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:21,045 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:33:21,046 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:33:21,074 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:33:21,112 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+ERROR 2025-09-08 17:33:21,662 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:21,674 log Internal Server Error: /blog/posts/1/
+Traceback (most recent call last):
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tuhin/ProjectCanvas/backend/projectcanvas/views.py", line 670, in blog_post_detail
+    return get_blog_post(request, pk)
+           ^^^^^^^^^^^^^
+NameError: name 'get_blog_post' is not defined. Did you mean: 'get_blog_posts'?
+ERROR 2025-09-08 17:33:21,674 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+ERROR 2025-09-08 17:33:21,677 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 73146
+INFO 2025-09-08 17:33:21,692 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:33:21,727 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:33:54,544 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:33:55,022 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:06,324 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:34:06,685 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:08,197 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:34:08,204 basehttp "GET /blog/posts/? HTTP/1.1" 200 310
+INFO 2025-09-08 17:34:27,151 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:34:27,476 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:28,522 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:34:28,780 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:29,937 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:34:30,240 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:35,412 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:34:35,701 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:48,909 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:34:49,229 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:56,422 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:34:56,724 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:34:59,893 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:35:00,186 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:35:07,382 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:35:07,755 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:35:12,929 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:35:13,225 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:35:19,409 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:35:19,712 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:36:07,096 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:36:07,495 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:38:45,411 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:38:45,759 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:38:50,963 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:38:51,329 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:39:10,582 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-08 17:39:10,893 autoreload Watching for file changes with StatReloader
+ERROR 2025-09-08 17:39:12,987 views Get blog post error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:12,987 views Get blog post error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:12,989 log Internal Server Error: /blog/posts/1/
+ERROR 2025-09-08 17:39:12,989 log Internal Server Error: /blog/posts/1/
+ERROR 2025-09-08 17:39:12,990 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 57
+ERROR 2025-09-08 17:39:12,990 basehttp "GET /blog/posts/1/ HTTP/1.1" 500 57
+ERROR 2025-09-08 17:39:13,016 views Get blog posts error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:13,016 log Internal Server Error: /blog/posts/
+ERROR 2025-09-08 17:39:13,017 basehttp "GET /blog/posts/? HTTP/1.1" 500 57
+ERROR 2025-09-08 17:39:13,047 views Get blog posts error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:13,047 log Internal Server Error: /blog/posts/
+ERROR 2025-09-08 17:39:13,048 basehttp "GET /blog/posts/? HTTP/1.1" 500 57
+ERROR 2025-09-08 17:39:30,730 views Get blog posts error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:30,731 log Internal Server Error: /blog/posts/
+ERROR 2025-09-08 17:39:30,731 basehttp "GET /blog/posts/? HTTP/1.1" 500 57
+ERROR 2025-09-08 17:39:30,732 views Get blog posts error: 'BlogPost' object has no attribute 'excerpt'
+ERROR 2025-09-08 17:39:30,732 log Internal Server Error: /blog/posts/
+ERROR 2025-09-08 17:39:30,732 basehttp "GET /blog/posts/? HTTP/1.1" 500 57
+ERROR 2025-09-08 17:40:17,699 views Create blog post error: BlogPost() got unexpected keyword arguments: 'excerpt'
+ERROR 2025-09-08 17:40:17,699 log Internal Server Error: /blog/create/
+ERROR 2025-09-08 17:40:17,699 basehttp "POST /blog/create/ HTTP/1.1" 500 67
+INFO 2025-09-08 17:44:33,902 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-08 17:44:34,243 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 17:44:37,274 basehttp "POST /blog/create/ HTTP/1.1" 200 81
+INFO 2025-09-08 17:44:39,309 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:39,310 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:46,410 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:44:46,410 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-08 17:44:54,507 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:54,511 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:56,793 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:56,797 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:59,546 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:44:59,557 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:45:00,240 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:45:00,244 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-08 17:45:02,921 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:45:02,940 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:12,825 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:12,834 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:29,358 basehttp "OPTIONS /blog/posts/2/ HTTP/1.1" 200 0
+INFO 2025-09-08 17:46:29,363 basehttp "PUT /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:31,385 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:31,389 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:38,388 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-08 17:46:38,400 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015

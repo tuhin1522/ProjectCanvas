@@ -27,7 +27,7 @@ const ResendVerification = () => {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:8000/api/resend-verification/', {
+      const response = await fetch('http://localhost:8000/resend-verification/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

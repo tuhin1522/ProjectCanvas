@@ -11,7 +11,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/projects/${id}/`);
+        const response = await fetch(`http://localhost:8000/projects/${id}/`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

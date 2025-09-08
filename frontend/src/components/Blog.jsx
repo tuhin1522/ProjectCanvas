@@ -47,7 +47,6 @@ const Blog = () => {
       {
         id: 1,
         title: "How to Structure Your First Machine Learning Project",
-        excerpt: "A guide to organizing code, data, and documentation for better collaboration and reproducibility in ML projects.",
         author: "Dr. Sarah Chen",
         authorRole: "Associate Professor",
         category: "Machine Learning",
@@ -58,7 +57,6 @@ const Blog = () => {
       {
         id: 2,
         title: "Building Accessible Web Applications: A Student's Guide",
-        excerpt: "Learn how to make your web projects inclusive and accessible to all users, including those with disabilities.",
         author: "James Wilson",
         authorRole: "Final Year Student",
         category: "Web Development",
@@ -69,7 +67,6 @@ const Blog = () => {
       {
         id: 3,
         title: "From Classroom to Production: Deploying Your First API",
-        excerpt: "A step-by-step walkthrough of taking your backend project from a local environment to a production server.",
         author: "Miguel Rodriguez",
         authorRole: "Graduate Assistant",
         category: "Backend Development",
@@ -80,7 +77,6 @@ const Blog = () => {
       {
         id: 4,
         title: "Cross-Department Collaboration: Engineering Meets Design",
-        excerpt: "How engineering and design students collaborated to create an award-winning smart home interface.",
         author: "Prof. Emily Parker & Prof. David Kim",
         authorRole: "Faculty Members",
         category: "Collaboration",
@@ -91,7 +87,6 @@ const Blog = () => {
       {
         id: 5,
         title: "Research Paper to Software: Turning Academic Ideas into Working Code",
-        excerpt: "The journey of implementing theoretical concepts from a research paper into functional software.",
         author: "Dr. Alan Johnson",
         authorRole: "Research Supervisor",
         category: "Research",
@@ -102,7 +97,6 @@ const Blog = () => {
       {
         id: 6,
         title: "Optimizing Your GitHub Profile for Employers",
-        excerpt: "How to structure your projects and GitHub profile to stand out to potential employers and showcase your skills.",
         author: "Lisa Zhang",
         authorRole: "Career Advisor",
         category: "Career",
@@ -128,8 +122,7 @@ const Blog = () => {
   const filteredArticles = articles.filter(article => {
     return (
       (filters.search === '' || 
-        article.title.toLowerCase().includes(filters.search.toLowerCase()) || 
-        article.excerpt.toLowerCase().includes(filters.search.toLowerCase())) &&
+        article.title.toLowerCase().includes(filters.search.toLowerCase())) &&
       (filters.category === '' || article.category === filters.category)
     );
   });
@@ -165,7 +158,7 @@ const Blog = () => {
                 name="search"
                 value={filters.search}
                 onChange={handleFilterChange}
-                placeholder="Search by title or content"
+                placeholder="Search by title"
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-indigo-200 focus:border-indigo-500"
               />
             </div>
@@ -214,7 +207,6 @@ const Blog = () => {
                       </span>
                     </div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">{articles[0].title}</h2>
-                    <p className="text-gray-600 mb-6">{articles[0].excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
                         <div className="h-10 w-10 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold text-xl">
@@ -262,7 +254,6 @@ const Blog = () => {
                       </span>
                     </div>
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">{article.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4 flex-grow">{article.excerpt}</p>
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center">
                         <div className="h-8 w-8 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold">

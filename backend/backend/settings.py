@@ -159,6 +159,12 @@ CORS_ALLOW_CREDENTIALS = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Ensure media directories exist
+os.makedirs(os.path.join(MEDIA_ROOT, 'blog_covers'), exist_ok=True)
+os.makedirs(os.path.join(MEDIA_ROOT, 'screenshots'), exist_ok=True)
+os.makedirs(os.path.join(MEDIA_ROOT, 'projects'), exist_ok=True)
+os.makedirs(os.path.join(MEDIA_ROOT, 'documentation'), exist_ok=True)
+
 # Logging Configuration
 LOGGING = {
     'version': 1,

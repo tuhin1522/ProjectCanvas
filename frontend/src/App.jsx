@@ -13,6 +13,8 @@ import ForgotPassword from './components/ForgotPassword'
 import ResetPassword from './components/ResetPassword'
 import ProjectPage from './components/ProjectPage';
 import WriteBlog from './components/WriteBlog';
+import BlogDetail from './components/BlogDetail';
+import EditBlog from './components/EditBlog';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/explore" element={<Explore />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/write" element={<WriteBlog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/blog/edit/:id" element={<EditBlog />} />
             <Route path="/upload" element={<Upload />} />
             <Route path="/projects/:id" element={<ProjectPage />} />
             <Route path="/verify-email/:token" element={<VerifyEmail />} />

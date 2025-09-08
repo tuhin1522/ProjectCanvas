@@ -1,29 +1,14 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Assume you have a way to get the logged-in user info
-// For example, from props or context:
-const WriteBlog = () => { // Remove user prop
+const EditBlog = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
-
-  // Get user data from localStorage
   const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    // Get logged-in user data from localStorage
-    const userData = localStorage.getItem('user');
-    if (userData) {
-      setUser(JSON.parse(userData));
-    } else {
-      // Redirect to login if no user data found
-      toast.error('Please log in to write a blog post');
-      navigate('/login');
-    }
-  }, [navigate]);
-
-  // Auto-fill author info from user
+  const [loading, setLoading] = useState(false);
+  const [newTag, setNewTag] = useState('');
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -31,15 +16,8 @@ const WriteBlog = () => { // Remove user prop
     coverImage: null,
     authorRole: '',
     estimatedReadTime: 5,
-    tags: [] // Added missing tags array
+    tags: []
   });
-
-  // Author info from login
-  const authorName = user?.name || '';
-  const authorEmail = user?.email || '';
-
-  const [loading, setLoading] = useState(false);
-  const [newTag, setNewTag] = useState(''); // Added missing newTag state
 
   const categories = [
     'Project Ideas',
@@ -58,6 +36,58 @@ const WriteBlog = () => { // Remove user prop
     'Other'
   ];
 
+  useEffect(() => {
+    // Get user data from localStorage
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      setUser(JSON.parse(userData));
+    } else {
+      toast.error('Please log in to edit blog posts');
+      navigate('/login');
+      return;
+    }
+
+    // Fetch blog post data
+    fetchBlogPost();
+  }, [id, navigate]);
+
+  const fetchBlogPost = async () => {
+    try {
+      const response = await fetch(`http://localhost:8000/blog/posts/${id}/`);
+      const data = await response.json();
+      
+      if (data.success) {
+        const blog = data.post;
+        
+        // Check if user is the author
+        const userData = JSON.parse(localStorage.getItem('user'));
+        if (userData.email !== blog.authorEmail) {
+          toast.error('You can only edit your own blog posts');
+          navigate('/blog');
+          return;
+        }
+
+        // Populate form with existing data
+        setFormData({
+          title: blog.title,
+          content: blog.content,
+          category: blog.category,
+          coverImage: null, // Will be handled separately
+          authorRole: blog.authorRole,
+          estimatedReadTime: blog.readTime,
+          tags: blog.tags || []
+        });
+      } else {
+        toast.error('Blog post not found');
+        navigate('/blog');
+      }
+    } catch (error) {
+      console.error('Error fetching blog post:', error);
+      toast.error('Failed to load blog post');
+      navigate('/blog');
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -71,6 +101,7 @@ const WriteBlog = () => { // Remove user prop
       const file = e.target.files[0];
       const maxSize = 5 * 1024 * 1024; // 5MB
       const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
+      
       if (file.size > maxSize) {
         toast.error('Image must be less than 5MB');
         return;
@@ -79,6 +110,7 @@ const WriteBlog = () => { // Remove user prop
         toast.error('Only JPEG, PNG, and WebP images are allowed');
         return;
       }
+      
       setFormData(prev => ({
         ...prev,
         coverImage: file
@@ -86,7 +118,6 @@ const WriteBlog = () => { // Remove user prop
     }
   };
 
-  // Added missing addTag function
   const addTag = () => {
     if (newTag.trim() && !formData.tags.includes(newTag.trim())) {
       setFormData(prev => ({
@@ -97,7 +128,6 @@ const WriteBlog = () => { // Remove user prop
     }
   };
 
-  // Added missing removeTag function
   const removeTag = (tagToRemove) => {
     setFormData(prev => ({
       ...prev,
@@ -128,18 +158,17 @@ const WriteBlog = () => { // Remove user prop
     submitData.append('title', formData.title);
     submitData.append('content', formData.content);
     submitData.append('category', formData.category);
-    submitData.append('authorName', authorName);
-    submitData.append('authorEmail', authorEmail);
     submitData.append('authorRole', formData.authorRole);
     submitData.append('estimatedReadTime', formData.estimatedReadTime);
-    submitData.append('tags', JSON.stringify(formData.tags)); // Added tags to submission
+    submitData.append('tags', JSON.stringify(formData.tags));
+    
     if (formData.coverImage) {
       submitData.append('coverImage', formData.coverImage);
     }
 
     try {
-      const response = await fetch('http://localhost:8000/blog/create/', {
-        method: 'POST',
+      const response = await fetch(`http://localhost:8000/blog/posts/${id}/`, {
+        method: 'PUT',
         body: submitData,
       });
 
@@ -151,16 +180,16 @@ const WriteBlog = () => { // Remove user prop
 
       if (data.success) {
         setLoading(false);
-        toast.success('Blog post created successfully!');
+        toast.success('Blog post updated successfully!');
         setTimeout(() => {
-          navigate('/blog');
+          navigate(`/blog/${id}`);
         }, 2000);
       } else {
-        throw new Error(data.error || 'Failed to create blog post');
+        throw new Error(data.error || 'Failed to update blog post');
       }
     } catch (error) {
       setLoading(false);
-      toast.error(error.message || 'Failed to create blog post');
+      toast.error(error.message || 'Failed to update blog post');
     }
   };
 
@@ -168,10 +197,11 @@ const WriteBlog = () => { // Remove user prop
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 pt-20">
       <div className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Write a Blog Post</h1>
-          <p className="mt-2 text-gray-600">Share your project ideas, insights, and knowledge with the community</p>
+          <h1 className="text-3xl font-bold text-gray-900">Edit Blog Post</h1>
+          <p className="mt-2 text-gray-600">Update your blog post content and settings</p>
         </div>
       </div>
+      
       <div className="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
           <div className="px-4 py-5 sm:p-6">
@@ -197,6 +227,7 @@ const WriteBlog = () => { // Remove user prop
                         required
                       />
                     </div>
+
                     {/* Category */}
                     <div>
                       <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
@@ -216,6 +247,7 @@ const WriteBlog = () => { // Remove user prop
                         ))}
                       </select>
                     </div>
+
                     {/* Content */}
                     <div>
                       <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">
@@ -232,107 +264,71 @@ const WriteBlog = () => { // Remove user prop
                         required
                       />
                     </div>
+
                     {/* Cover Image */}
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900 mb-4">Cover Image</h3>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Cover Image <span className="text-gray-500">(Optional)</span>
-                        </label>
-                        <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed border-gray-300 rounded-md">
-                          <div className="space-y-1 text-center">
-                            {formData.coverImage ? (
-                              <div className="space-y-2">
-                                <img 
-                                  src={URL.createObjectURL(formData.coverImage)} 
-                                  alt="Cover preview" 
-                                  className="mx-auto h-32 w-auto rounded-lg"
-                                />
-                                <p className="text-sm text-gray-600">{formData.coverImage.name}</p>
-                                <button
-                                  type="button"
-                                  onClick={() => setFormData(prev => ({ ...prev, coverImage: null }))}
-                                  className="text-sm text-red-600 hover:text-red-800"
-                                >
-                                  Remove
-                                </button>
-                              </div>
-                            ) : (
-                              <>
-                                <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-                                  <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                <div className="flex text-sm text-gray-600">
-                                  <label htmlFor="cover-image" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500">
-                                    <span>Upload an image</span>
-                                    <input 
-                                      id="cover-image" 
-                                      name="cover-image" 
-                                      type="file" 
-                                      className="sr-only" 
-                                      accept="image/*"
-                                      onChange={handleImageChange}
-                                    />
-                                  </label>
-                                  <p className="pl-1">or drag and drop</p>
-                                </div>
-                                <p className="text-xs text-gray-500">
-                                  PNG, JPG, WebP up to 5MB
-                                </p>
-                              </>
-                            )}
-                          </div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Update Cover Image <span className="text-gray-500">(Optional)</span>
+                      </label>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                        className="w-full"
+                      />
+                      {formData.coverImage && (
+                        <div className="mt-2">
+                          <img
+                            src={URL.createObjectURL(formData.coverImage)}
+                            alt="Cover preview"
+                            className="h-32 w-auto rounded-lg"
+                          />
                         </div>
-                      </div>
+                      )}
                     </div>
 
                     {/* Tags */}
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900 mb-4">Tags</h3>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Tags <span className="text-gray-500">(Optional)</span>
-                        </label>
-                        
-                        {/* Add Tag Input */}
-                        <div className="flex gap-2 mb-3">
-                          <input
-                            type="text"
-                            value={newTag}
-                            onChange={(e) => setNewTag(e.target.value)}
-                            onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addTag())}
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder="Add a tag"
-                          />
-                          <button
-                            type="button"
-                            onClick={addTag}
-                            className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Tags <span className="text-gray-500">(Optional)</span>
+                      </label>
+                      
+                      <div className="flex gap-2 mb-3">
+                        <input
+                          type="text"
+                          value={newTag}
+                          onChange={(e) => setNewTag(e.target.value)}
+                          onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addTag())}
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                          placeholder="Add a tag"
+                        />
+                        <button
+                          type="button"
+                          onClick={addTag}
+                          className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                        >
+                          Add
+                        </button>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {formData.tags.map(tag => (
+                          <span 
+                            key={tag} 
+                            className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
                           >
-                            Add
-                          </button>
-                        </div>
-                        
-                        {/* Display Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {formData.tags.map(tag => (
-                            <span 
-                              key={tag} 
-                              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
+                            {tag}
+                            <button
+                              type="button"
+                              onClick={() => removeTag(tag)}
+                              className="ml-2 inline-flex items-center p-0.5 rounded-full text-indigo-400 hover:bg-indigo-200 hover:text-indigo-600"
                             >
-                              {tag}
-                              <button
-                                type="button"
-                                onClick={() => removeTag(tag)}
-                                className="ml-2 inline-flex items-center p-0.5 rounded-full text-indigo-400 hover:bg-indigo-200 hover:text-indigo-600"
-                              >
-                                <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                              </button>
-                            </span>
-                          ))}
-                        </div>
+                              <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                              </svg>
+                            </button>
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -342,7 +338,6 @@ const WriteBlog = () => { // Remove user prop
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 mb-4">Author Information</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Removed Name and Email fields - they are auto-filled from login */}
                     <div>
                       <label htmlFor="authorRole" className="block text-sm font-medium text-gray-700 mb-1">
                         Role/Position
@@ -375,24 +370,21 @@ const WriteBlog = () => { // Remove user prop
                   </div>
                 </div>
 
-                {/* Submit Button */}
-                <div className="pt-6">
+                {/* Submit Buttons */}
+                <div className="pt-6 flex gap-4">
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+                    className="flex-1 flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
                   >
-                    {loading ? (
-                      <>
-                        <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Publishing...
-                      </>
-                    ) : (
-                      'Publish Blog Post'
-                    )}
+                    {loading ? 'Updating...' : 'Update Blog Post'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => navigate(`/blog/${id}`)}
+                    className="px-6 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                  >
+                    Cancel
                   </button>
                 </div>
               </div>
@@ -405,4 +397,4 @@ const WriteBlog = () => { // Remove user prop
   );
 };
 
-export default WriteBlog;
+export default EditBlog;

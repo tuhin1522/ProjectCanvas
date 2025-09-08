@@ -139,7 +139,7 @@ const Signup = () => {
       // Remove confirm_password before sending to API
       const { confirm_password, ...dataToSend } = formData;
       
-      const response = await fetch('http://localhost:8000/api/signup/', {
+      const response = await fetch('http://localhost:8000/signup/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
