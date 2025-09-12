@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getImageWithFallback } from '../utils/imageUtils';
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -150,13 +151,17 @@ const BlogDetail = () => {
           {/* Cover Image */}
           {blog.image && (
             <div className="h-64 md:h-96 overflow-hidden">
-              <img 
-                src={blog.image} 
+                <img 
+                src={getImageWithFallback(blog.image)}
                 alt={blog.title} 
                 className="w-full h-full object-cover"
-              />
+                onError={(e) => {
+                    // Fallback to a default image if the image fails to load
+                    e.target.src = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3";
+                }}
+                />
             </div>
-          )}
+            )}
 
           <div className="p-8">
             {/* Header */}

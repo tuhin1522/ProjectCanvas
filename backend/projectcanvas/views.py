@@ -682,7 +682,7 @@ def create_blog_post(request):
 def get_blog_posts(request):
     """Get all published blog posts"""
     try:
-        posts = BlogPost.objects.filter(is_published=True)
+        posts = BlogPost.objects.filter(is_published=True).order_by('-created_at')
         
         # Apply filters if provided
         category = request.GET.get('category')
@@ -692,7 +692,6 @@ def get_blog_posts(request):
             posts = posts.filter(category=category)
         
         if search:
-            # REMOVED excerpt from search filter
             posts = posts.filter(
                 Q(title__icontains=search) | 
                 Q(content__icontains=search)
@@ -703,10 +702,10 @@ def get_blog_posts(request):
             posts_data.append({
                 'id': post.id,
                 'title': post.title,
-                # REMOVED excerpt from response
                 'category': post.category,
                 'tags': post.tags,
                 'author': post.author_name,
+                'authorEmail': post.author_email,
                 'authorRole': post.author_role,
                 'date': post.created_at.isoformat(),
                 'readTime': post.estimated_read_time,
@@ -731,7 +730,6 @@ def get_blog_post(request, pk):
         post_data = {
             'id': post.id,
             'title': post.title,
-            # REMOVED excerpt from response
             'content': post.content,
             'category': post.category,
             'tags': post.tags,
@@ -904,16 +902,11 @@ def delete_blog_post(request, pk):
 @csrf_exempt
 def blog_post_handler(request, pk):
     """Handle blog post operations based on HTTP method"""
-    print(f"Request method: {request.method}")  # Debug log
-    print(f"Request path: {request.path}")      # Debug log
-    
     if request.method == 'GET':
         return get_blog_post(request, pk)
     elif request.method in ['PUT', 'PATCH']:
-        print("Calling update_blog_post")       # Debug log
         return update_blog_post(request, pk)
     elif request.method == 'DELETE':
         return delete_blog_post(request, pk)
     else:
-        print(f"Method not allowed: {request.method}")  # Debug log
         return HttpResponseNotAllowed(['GET', 'PUT', 'PATCH', 'DELETE'])

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getImageWithFallback } from '../utils/imageUtils';
 
 const Blog = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [filters, setFilters] = useState({
     search: '',
     category: '',
@@ -17,25 +19,31 @@ const Blog = () => {
   const fetchBlogPosts = async () => {
     try {
       setLoading(true);
-      const params = new URLSearchParams();
+      setError(null);
       
+      const params = new URLSearchParams();
       if (filters.search) params.append('search', filters.search);
       if (filters.category) params.append('category', filters.category);
       
+      console.log('Fetching blog posts...'); // Debug log
+      
       const response = await fetch(`http://localhost:8000/blog/posts/?${params}`);
+      console.log('Response status:', response.status); // Debug log
+      
       const data = await response.json();
+      console.log('Response data:', data); // Debug log
       
       if (data.success) {
-        setArticles(data.posts);
+        setArticles(data.posts || []);
       } else {
         console.error('Failed to fetch blog posts:', data.error);
-        // Fall back to mock data if API fails
-        setMockData();
+        setError('Failed to load blog posts');
+        setMockData(); // Fallback to mock data
       }
     } catch (error) {
       console.error('Error fetching blog posts:', error);
-      // Fall back to mock data if API fails
-      setMockData();
+      setError('Network error while loading blog posts');
+      setMockData(); // Fallback to mock data
     } finally {
       setLoading(false);
     }
@@ -63,46 +71,6 @@ const Blog = () => {
         date: "2023-08-22T00:00:00Z",
         readTime: 6,
         image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3"
-      },
-      {
-        id: 3,
-        title: "From Classroom to Production: Deploying Your First API",
-        author: "Miguel Rodriguez",
-        authorRole: "Graduate Assistant",
-        category: "Backend Development",
-        date: "2023-07-30T00:00:00Z",
-        readTime: 10,
-        image: "https://images.unsplash.com/photo-1573495612937-f978cc14e431?ixlib=rb-4.0.3"
-      },
-      {
-        id: 4,
-        title: "Cross-Department Collaboration: Engineering Meets Design",
-        author: "Prof. Emily Parker & Prof. David Kim",
-        authorRole: "Faculty Members",
-        category: "Collaboration",
-        date: "2023-06-18T00:00:00Z",
-        readTime: 7,
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3"
-      },
-      {
-        id: 5,
-        title: "Research Paper to Software: Turning Academic Ideas into Working Code",
-        author: "Dr. Alan Johnson",
-        authorRole: "Research Supervisor",
-        category: "Research",
-        date: "2023-05-09T00:00:00Z",
-        readTime: 12,
-        image: "https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?ixlib=rb-4.0.3"
-      },
-      {
-        id: 6,
-        title: "Optimizing Your GitHub Profile for Employers",
-        author: "Lisa Zhang",
-        authorRole: "Career Advisor",
-        category: "Career",
-        date: "2023-04-14T00:00:00Z",
-        readTime: 5,
-        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3"
       }
     ]);
   };
@@ -117,15 +85,6 @@ const Blog = () => {
       [name]: value
     });
   };
-
-  // Apply filters to articles (for client-side filtering when needed)
-  const filteredArticles = articles.filter(article => {
-    return (
-      (filters.search === '' || 
-        article.title.toLowerCase().includes(filters.search.toLowerCase())) &&
-      (filters.category === '' || article.category === filters.category)
-    );
-  });
 
   // Format date helper
   const formatDate = (dateString) => {
@@ -143,6 +102,13 @@ const Blog = () => {
             Insights, tutorials, and stories from students, faculty, and the wider academic community.
           </p>
         </div>
+        
+        {/* Error Message */}
+        {error && (
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+            <p className="text-red-700">{error}</p>
+          </div>
+        )}
         
         {/* Filters */}
         <div className="bg-white rounded-xl shadow-md p-6 mb-8">
@@ -192,9 +158,12 @@ const Blog = () => {
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="h-64 md:h-auto overflow-hidden">
                     <img 
-                      src={articles[0].image} 
+                      src={getImageWithFallback(articles[0].image)}
                       alt={articles[0].title} 
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.src = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3";
+                      }}
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
@@ -233,15 +202,17 @@ const Blog = () => {
           </div>
         ) : articles.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Skip the first article as it's the featured one */}
             {articles.slice(1).map(article => (
               <Link to={`/blog/${article.id}`} key={article.id} className="block">
                 <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all h-full flex flex-col">
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src={article.image} 
+                      src={getImageWithFallback(article.image)}
                       alt={article.title} 
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.src = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3";
+                      }}
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -304,29 +275,6 @@ const Blog = () => {
             Write an Article
           </Link>
         </div>
-        
-        {/* Statistics Section */}
-        {articles.length > 0 && (
-          <div className="mt-12 bg-white rounded-xl shadow-md p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Blog Statistics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-600">{articles.length}</div>
-                <div className="text-sm text-gray-600">Total Articles</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-600">{categories.length}</div>
-                <div className="text-sm text-gray-600">Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-600">
-                  {Math.round(articles.reduce((sum, article) => sum + article.readTime, 0) / articles.length)}
-                </div>
-                <div className="text-sm text-gray-600">Avg. Read Time (min)</div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
