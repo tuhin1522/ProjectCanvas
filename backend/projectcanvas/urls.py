@@ -15,8 +15,6 @@ urlpatterns = [
     path('api/projects/<int:pk>/publish/', publish_project, name='publish_project'),
      # Blog URLs
     path('blog/posts/', get_blog_posts, name='get_blog_posts'),
-    path('blog/posts/<int:pk>/', get_blog_post, name='get_blog_post'),
     path('blog/create/', create_blog_post, name='create_blog_post'),
-    path('blog/posts/<int:pk>/', update_blog_post, name='update_blog_post'),  # PUT method
-    path('blog/posts/<int:pk>/', delete_blog_post, name='delete_blog_post'),  # DELETE method
+    path('blog/posts/<int:pk>/', blog_post_handler, name='blog_post_handler'),
 ]

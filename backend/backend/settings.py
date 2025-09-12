@@ -177,9 +177,7 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'INFO',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
         },
         'file': {
             'level': 'INFO',
@@ -195,8 +193,8 @@ LOGGING = {
             'propagate': True,
         },
         'projectcanvas': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
+            'handlers': ['console'],
+            'level': 'DEBUG',
             'propagate': True,
         },
     },

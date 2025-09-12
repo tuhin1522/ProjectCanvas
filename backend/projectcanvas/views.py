@@ -822,7 +822,14 @@ def delete_blog_post(request, pk):
 
     try:
         blog_post = BlogPost.objects.get(pk=pk, is_published=True)
+        
+        # Optional: Add author validation
+        # if request.user.email != blog_post.author_email:
+        #     return JsonResponse({'error': 'Unauthorized'}, status=403)
+        
         blog_post.delete()
+        
+        logger.info(f"Blog post {pk} deleted successfully")
         
         return JsonResponse({
             'success': True,
@@ -832,4 +839,17 @@ def delete_blog_post(request, pk):
     except BlogPost.DoesNotExist:
         return JsonResponse({'error': 'Blog post not found'}, status=404)
     except Exception as e:
+        logger.error(f"Delete blog post error: {str(e)}")
         return JsonResponse({'error': str(e)}, status=500)
+
+@csrf_exempt
+def blog_post_handler(request, pk):
+    """Handle blog post operations based on HTTP method"""
+    if request.method == 'GET':
+        return get_blog_post(request, pk)
+    elif request.method == 'PUT':
+        return update_blog_post(request, pk)
+    elif request.method == 'DELETE':
+        return delete_blog_post(request, pk)
+    else:
+        return HttpResponseNotAllowed(['GET', 'PUT', 'DELETE'])

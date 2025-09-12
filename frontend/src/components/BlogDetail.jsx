@@ -60,24 +60,53 @@ const BlogDetail = () => {
   };
 
   const handleDelete = async () => {
-    if (window.confirm('Are you sure you want to delete this blog post?')) {
-      try {
+    if (window.confirm('Are you sure you want to delete this blog post? This action cannot be undone.')) {
+        try {
+        console.log(`Deleting blog post ID: ${id}`);
+        console.log(`URL: http://localhost:8000/blog/posts/${id}/`);
+        
         const response = await fetch(`http://localhost:8000/blog/posts/${id}/`, {
-          method: 'DELETE',
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json',
+            },
         });
         
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+        
+        const responseText = await response.text();
+        console.log('Response text:', responseText);
+        
         if (response.ok) {
-          toast.success('Blog post deleted successfully');
-          navigate('/blog');
+            try {
+            const data = JSON.parse(responseText);
+            console.log('Parsed response data:', data);
+            
+            if (data.success) {
+                toast.success('Blog post deleted successfully');
+                setTimeout(() => {
+                navigate('/blog');
+                }, 1500);
+            } else {
+                toast.error(data.error || 'Failed to delete blog post');
+            }
+            } catch (parseError) {
+            console.log('Response is not JSON, treating as success');
+            toast.success('Blog post deleted successfully');
+            setTimeout(() => {
+                navigate('/blog');
+            }, 1500);
+            }
         } else {
-          toast.error('Failed to delete blog post');
+            toast.error(`Delete failed with status: ${response.status}`);
         }
-      } catch (error) {
-        console.error('Error deleting blog post:', error);
-        toast.error('Failed to delete blog post');
-      }
+        } catch (error) {
+        console.error('Delete error:', error);
+        toast.error('Network error occurred while deleting');
+        }
     }
-  };
+    };
 
   if (loading) {
     return (
