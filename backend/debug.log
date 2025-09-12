@@ -2162,3 +2162,146 @@ WARNING 2025-09-12 14:34:19,013 log Bad Request: /blog/posts/2/
 WARNING 2025-09-12 14:34:19,014 basehttp "PUT /blog/posts/2/ HTTP/1.1" 400 30
 WARNING 2025-09-12 14:34:33,007 log Bad Request: /blog/posts/2/
 WARNING 2025-09-12 14:34:33,007 basehttp "PUT /blog/posts/2/ HTTP/1.1" 400 30
+INFO 2025-09-12 14:46:06,954 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 14:46:07,542 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:46:58,461 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 14:46:59,141 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:47:59,513 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:48:09,360 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:49:20,942 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 14:49:21,690 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:51:31,112 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:51:33,970 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:51:35,924 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:51:53,220 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:51:54,335 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:53:23,407 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-12 14:53:24,084 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:53:26,519 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-12 14:53:27,128 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:53:28,554 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-12 14:53:29,077 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:53:31,344 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-12 14:53:31,837 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:53:36,134 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/urls.py changed, reloading.
+INFO 2025-09-12 14:53:36,713 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:53:52,448 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:53:52,463 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+WARNING 2025-09-12 14:53:59,144 log Method Not Allowed: /blog/posts/2/
+WARNING 2025-09-12 14:53:59,145 basehttp "PATCH /blog/posts/2/ HTTP/1.1" 405 0
+WARNING 2025-09-12 14:54:12,983 log Method Not Allowed: /blog/posts/2/
+WARNING 2025-09-12 14:54:12,984 basehttp "PATCH /blog/posts/2/ HTTP/1.1" 405 0
+WARNING 2025-09-12 14:55:33,349 log Method Not Allowed: /blog/posts/2/
+WARNING 2025-09-12 14:55:33,350 basehttp "PATCH /blog/posts/2/ HTTP/1.1" 405 0
+INFO 2025-09-12 14:57:35,428 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 14:57:36,093 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 14:57:42,282 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:57:42,292 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 7015
+INFO 2025-09-12 14:57:51,540 basehttp "PATCH /blog/posts/2/ HTTP/1.1" 200 62
+INFO 2025-09-12 14:57:53,087 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 14:57:53,120 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 14:57:56,513 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-12 14:57:56,531 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-12 14:57:58,449 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 14:57:58,461 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 14:58:05,214 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-12 14:58:05,223 basehttp "GET /blog/posts/? HTTP/1.1" 200 585
+INFO 2025-09-12 14:58:08,959 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-12 14:58:08,975 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-12 14:58:11,685 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-12 14:58:11,696 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 7022
+INFO 2025-09-12 14:58:21,503 basehttp "OPTIONS /blog/posts/1/ HTTP/1.1" 200 0
+INFO 2025-09-12 14:58:21,526 basehttp "PATCH /blog/posts/1/ HTTP/1.1" 200 62
+INFO 2025-09-12 14:58:23,131 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:58:23,134 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:58:32,371 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:58:32,371 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:58:57,282 basehttp "PATCH /blog/posts/1/ HTTP/1.1" 200 62
+WARNING 2025-09-12 14:58:57,302 log Not Found: /blog/posts/1/upload-image/
+WARNING 2025-09-12 14:58:57,303 basehttp "POST /blog/posts/1/upload-image/ HTTP/1.1" 404 6319
+INFO 2025-09-12 14:58:58,877 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:58:58,887 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:59:41,534 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 14:59:41,568 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6834
+INFO 2025-09-12 15:00:17,715 basehttp "PATCH /blog/posts/1/ HTTP/1.1" 200 62
+WARNING 2025-09-12 15:00:17,734 log Not Found: /blog/posts/1/upload-image/
+WARNING 2025-09-12 15:00:17,735 basehttp "POST /blog/posts/1/upload-image/ HTTP/1.1" 404 6319
+INFO 2025-09-12 15:00:19,277 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:00:19,311 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:07:15,834 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:07:15,868 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:07:32,394 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:07:32,396 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:07:46,693 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:07:46,733 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:08:03,627 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:08:03,628 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:10:21,466 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:10:22,118 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:10:24,394 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:10:24,863 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:11:00,614 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:11:01,295 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:11:08,826 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:11:08,842 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+ERROR 2025-09-12 15:11:23,916 log Internal Server Error: /blog/posts/1/
+ERROR 2025-09-12 15:11:23,917 basehttp "PUT /blog/posts/1/ HTTP/1.1" 500 50
+INFO 2025-09-12 15:11:37,219 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:11:37,907 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:11:44,282 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:11:54,442 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:11:54,443 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:12:00,430 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:12:06,748 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:12:06,749 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:12:12,688 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:12:16,495 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:12:18,994 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:12:21,156 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:12:27,362 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:12:27,363 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:12:30,040 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:12:30,046 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+WARNING 2025-09-12 15:12:37,450 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:12:37,451 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+WARNING 2025-09-12 15:13:42,205 log Bad Request: /blog/posts/1/
+WARNING 2025-09-12 15:13:42,206 basehttp "PUT /blog/posts/1/ HTTP/1.1" 400 30
+INFO 2025-09-12 15:15:49,736 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:15:50,263 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:16:39,136 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:16:39,829 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:17:15,458 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:17:24,267 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+ERROR 2025-09-12 15:19:14,678 log Internal Server Error: /blog/posts/1/
+ERROR 2025-09-12 15:19:14,678 basehttp "PUT /blog/posts/1/ HTTP/1.1" 500 51
+INFO 2025-09-12 15:19:49,577 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:19:49,587 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+ERROR 2025-09-12 15:20:09,961 log Internal Server Error: /blog/posts/1/
+ERROR 2025-09-12 15:20:09,962 basehttp "PUT /blog/posts/1/ HTTP/1.1" 500 51
+INFO 2025-09-12 15:39:54,860 autoreload /home/tuhin/ProjectCanvas/backend/projectcanvas/views.py changed, reloading.
+INFO 2025-09-12 15:39:57,594 autoreload Watching for file changes with StatReloader
+INFO 2025-09-12 15:40:28,471 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:40:28,500 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6851
+INFO 2025-09-12 15:40:47,297 basehttp "PUT /blog/posts/1/ HTTP/1.1" 200 62
+INFO 2025-09-12 15:40:49,489 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:40:49,497 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:41:17,977 basehttp "GET /blog/posts/? HTTP/1.1" 200 604
+INFO 2025-09-12 15:41:18,024 basehttp "GET /blog/posts/? HTTP/1.1" 200 604
+INFO 2025-09-12 15:45:39,915 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 15:45:39,978 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 15:47:35,090 basehttp "GET /blog/posts/? HTTP/1.1" 200 604
+INFO 2025-09-12 15:47:35,090 basehttp "GET /blog/posts/? HTTP/1.1" 200 604
+INFO 2025-09-12 15:47:39,419 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 15:47:39,424 basehttp "GET /blog/posts/2/ HTTP/1.1" 200 6827
+INFO 2025-09-12 15:47:48,511 basehttp "DELETE /blog/posts/2/ HTTP/1.1" 200 62
+INFO 2025-09-12 15:47:50,032 basehttp "GET /blog/posts/? HTTP/1.1" 200 329
+INFO 2025-09-12 15:47:50,041 basehttp "GET /blog/posts/? HTTP/1.1" 200 329
+INFO 2025-09-12 15:47:54,076 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:47:54,081 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:47:59,256 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:47:59,261 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6722
+INFO 2025-09-12 15:48:18,323 basehttp "PUT /blog/posts/1/ HTTP/1.1" 200 62
+INFO 2025-09-12 15:48:20,345 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6505
+INFO 2025-09-12 15:48:20,349 basehttp "GET /blog/posts/1/ HTTP/1.1" 200 6505
+INFO 2025-09-12 15:50:31,005 basehttp "GET /blog/posts/? HTTP/1.1" 200 329
+INFO 2025-09-12 15:50:31,010 basehttp "GET /blog/posts/? HTTP/1.1" 200 329

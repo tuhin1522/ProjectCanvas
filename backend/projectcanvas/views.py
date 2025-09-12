@@ -11,6 +11,9 @@ from django.utils import timezone
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib.auth.hashers import make_password
+from django.db.models import Q
+from django.http.multipartparser import MultiPartParser
+from django.core.files.uploadhandler import MemoryFileUploadHandler
 from .models import *
 
 # Add docx import for document processing
@@ -754,32 +757,85 @@ def get_blog_post(request, pk):
 @csrf_exempt
 def update_blog_post(request, pk):
     """Update a blog post (only by author)"""
-    if request.method != 'PUT':
-        return HttpResponseNotAllowed(['PUT'])
+    if request.method not in ['PUT', 'PATCH']:
+        return HttpResponseNotAllowed(['PUT', 'PATCH'])
 
     try:
         blog_post = BlogPost.objects.get(pk=pk, is_published=True)
         
-        # Extract form data
-        title = request.POST.get('title', '').strip()
-        content = request.POST.get('content', '').strip()
-        category = request.POST.get('category', '').strip()
-        author_role = request.POST.get('authorRole', '').strip()
-        
-        try:
-            estimated_read_time = int(request.POST.get('estimatedReadTime', 5))
-        except (ValueError, TypeError):
-            estimated_read_time = 5
-        
-        # Parse tags
-        tags = []
-        try:
-            tags_raw = request.POST.get('tags', '[]')
-            if tags_raw:
-                tags = json.loads(tags_raw)
-        except Exception as e:
-            print(f"Tags parsing error: {e}")
+        # Parse FormData for PUT requests
+        if request.method == 'PUT' and request.content_type and 'multipart/form-data' in request.content_type:
+            # Create a proper file-like object from request.body
+            from io import BytesIO
+            from django.core.files.uploadhandler import MemoryFileUploadHandler
+            from django.http.multipartparser import MultiPartParser
+            
+            # Create a file-like object from the bytes
+            stream = BytesIO(request.body)
+            
+            # Create a mock request object with the file stream
+            class MockRequest:
+                def __init__(self, stream, meta):
+                    self.stream = stream
+                    self.META = meta
+                
+                def read(self, *args, **kwargs):
+                    return self.stream.read(*args, **kwargs)
+                
+                def readline(self, *args, **kwargs):
+                    return self.stream.readline(*args, **kwargs)
+            
+            mock_request = MockRequest(stream, request.META)
+            
+            # Parse the multipart data
+            parser = MultiPartParser(request.META, mock_request, [MemoryFileUploadHandler()])
+            POST, FILES = parser.parse()
+            
+            # Extract data from parsed FormData
+            title = POST.get('title', '').strip()
+            content = POST.get('content', '').strip()
+            category = POST.get('category', '').strip()
+            author_role = POST.get('authorRole', '').strip()
+            
+            try:
+                estimated_read_time = int(POST.get('estimatedReadTime', 5))
+            except (ValueError, TypeError):
+                estimated_read_time = 5
+            
+            # Parse tags
             tags = []
+            try:
+                tags_raw = POST.get('tags', '[]')
+                if tags_raw:
+                    tags = json.loads(tags_raw)
+            except Exception as e:
+                logger.error(f"Tags parsing error: {e}")
+                tags = []
+                
+            # Handle cover image
+            cover_image = FILES.get('coverImage')
+            
+        elif request.method == 'PATCH':
+            # Handle JSON data for PATCH requests
+            try:
+                data = json.loads(request.body)
+            except json.JSONDecodeError:
+                return JsonResponse({'error': 'Invalid JSON data'}, status=400)
+            
+            title = data.get('title', '').strip()
+            content = data.get('content', '').strip()
+            category = data.get('category', '').strip()
+            author_role = data.get('authorRole', '').strip()
+            estimated_read_time = data.get('estimatedReadTime', 5)
+            tags = data.get('tags', [])
+            cover_image = None
+            
+        else:
+            # Fallback - this shouldn't happen with proper requests
+            return JsonResponse({'error': 'Invalid request format'}, status=400)
+        
+        # Debug logging
+        logger.info(f"Update request - Title: '{title}', Content length: {len(content)}, Category: '{category}'")
         
         # Validation
         if not title:
@@ -789,7 +845,7 @@ def update_blog_post(request, pk):
         if not category:
             return JsonResponse({'error': 'Category is required'}, status=400)
         
-        # Update blog post
+        # Update blog post fields
         blog_post.title = title
         blog_post.content = content
         blog_post.category = category
@@ -798,11 +854,12 @@ def update_blog_post(request, pk):
         blog_post.estimated_read_time = estimated_read_time
         
         # Handle cover image if provided
-        cover_image = request.FILES.get('coverImage')
         if cover_image:
             blog_post.cover_image.save(cover_image.name, cover_image, save=True)
         
         blog_post.save()
+        
+        logger.info(f"Blog post {pk} updated successfully")
         
         return JsonResponse({
             'success': True,
@@ -812,6 +869,8 @@ def update_blog_post(request, pk):
     except BlogPost.DoesNotExist:
         return JsonResponse({'error': 'Blog post not found'}, status=404)
     except Exception as e:
+        logger.error(f"Update blog post error: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
         return JsonResponse({'error': str(e)}, status=500)
 
 @csrf_exempt
@@ -845,11 +904,16 @@ def delete_blog_post(request, pk):
 @csrf_exempt
 def blog_post_handler(request, pk):
     """Handle blog post operations based on HTTP method"""
+    print(f"Request method: {request.method}")  # Debug log
+    print(f"Request path: {request.path}")      # Debug log
+    
     if request.method == 'GET':
         return get_blog_post(request, pk)
-    elif request.method == 'PUT':
+    elif request.method in ['PUT', 'PATCH']:
+        print("Calling update_blog_post")       # Debug log
         return update_blog_post(request, pk)
     elif request.method == 'DELETE':
         return delete_blog_post(request, pk)
     else:
-        return HttpResponseNotAllowed(['GET', 'PUT', 'DELETE'])
+        print(f"Method not allowed: {request.method}")  # Debug log
+        return HttpResponseNotAllowed(['GET', 'PUT', 'PATCH', 'DELETE'])

@@ -16,5 +16,6 @@ urlpatterns = [
      # Blog URLs
     path('blog/posts/', get_blog_posts, name='get_blog_posts'),
     path('blog/create/', create_blog_post, name='create_blog_post'),
+    path('blog/posts/<int:pk>/update/', update_blog_post, name='update_blog_post_form'),
     path('blog/posts/<int:pk>/', blog_post_handler, name='blog_post_handler'),
 ]

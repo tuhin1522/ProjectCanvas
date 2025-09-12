@@ -140,58 +140,69 @@ const EditBlog = () => {
 
     // Validation
     if (!formData.title.trim()) {
-      toast.error('Please enter a title');
-      return;
+        toast.error('Please enter a title');
+        return;
     }
     if (!formData.content.trim()) {
-      toast.error('Please enter content');
-      return;
+        toast.error('Please enter content');
+        return;
     }
     if (!formData.category) {
-      toast.error('Please select a category');
-      return;
+        toast.error('Please select a category');
+        return;
     }
 
     setLoading(true);
 
-    const submitData = new FormData();
-    submitData.append('title', formData.title);
-    submitData.append('content', formData.content);
-    submitData.append('category', formData.category);
-    submitData.append('authorRole', formData.authorRole);
-    submitData.append('estimatedReadTime', formData.estimatedReadTime);
-    submitData.append('tags', JSON.stringify(formData.tags));
-    
-    if (formData.coverImage) {
-      submitData.append('coverImage', formData.coverImage);
-    }
-
     try {
-      const response = await fetch(`http://localhost:8000/blog/posts/${id}/`, {
+        const submitData = new FormData();
+        submitData.append('title', formData.title);
+        submitData.append('content', formData.content);
+        submitData.append('category', formData.category);
+        submitData.append('authorRole', formData.authorRole);
+        submitData.append('estimatedReadTime', formData.estimatedReadTime);
+        submitData.append('tags', JSON.stringify(formData.tags));
+        
+        if (formData.coverImage) {
+        submitData.append('coverImage', formData.coverImage);
+        }
+
+        // Debug: Log what we're sending
+        console.log('Sending update request with data:');
+        for (let [key, value] of submitData.entries()) {
+        console.log(key, value);
+        }
+
+        const response = await fetch(`http://localhost:8000/blog/posts/${id}/`, {
         method: 'PUT',
         body: submitData,
-      });
+        // DO NOT set Content-Type header - let browser set it for FormData
+        });
 
-      const responseText = await response.text();
-      if (!response.ok) {
+        const responseText = await response.text();
+        console.log('Response text:', responseText);
+        
+        if (!response.ok) {
         throw new Error(responseText);
-      }
-      const data = JSON.parse(responseText);
+        }
+        
+        const data = JSON.parse(responseText);
 
-      if (data.success) {
+        if (data.success) {
         setLoading(false);
         toast.success('Blog post updated successfully!');
         setTimeout(() => {
-          navigate(`/blog/${id}`);
+            navigate(`/blog/${id}`);
         }, 2000);
-      } else {
+        } else {
         throw new Error(data.error || 'Failed to update blog post');
-      }
+        }
     } catch (error) {
-      setLoading(false);
-      toast.error(error.message || 'Failed to update blog post');
+        setLoading(false);
+        console.error('Update error:', error);
+        toast.error(error.message || 'Failed to update blog post');
     }
-  };
+    };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 pt-20">
